@@ -22,10 +22,10 @@ Homography and an arbitrary perspective are used to define the Projection matrix
 
 ### Inputs
 
-* 4 * World to Projection correspondences
+* 4 World to Projection correspondences
 * 3D position of projector (easy to tweak when 4 correspondences are locked)
 
 ### Prerequisites
 
-* None (works with native vvvv24.1 and modules here)
+* vvvv24.1
 
