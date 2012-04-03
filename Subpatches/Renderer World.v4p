@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45alpha27.1.dtd" >
    <PATCH nodename="C:\kimchiandchips\Workshops\VVVV.Tutorials.Mapping2-3D\Subpatches\Renderer World.v4p" filename="C:\kimchiandchips\Workshops\VVVV.Tutorials.Mapping2-3D\Subpatches\Renderer World.v4p" systemname="Renderer World">
-   <BOUNDS height="8760" left="16485" top="5895" type="Window" width="7305">
+   <BOUNDS height="12840" left="16485" top="1815" type="Window" width="7305">
    </BOUNDS>
    <NODE componentmode="InAWindow" id="7" nodename="Renderer (EX9)" systemname="Renderer (EX9)">
    <BOUNDS height="270" left="615" top="4710" type="Node" width="6105">
@@ -43,7 +43,7 @@
    </PIN>
    <PIN pinname="Initial Yaw" slicecount="1" values="-0.05">
    </PIN>
-   <PIN pinname="Inital Distance" slicecount="1" values="3">
+   <PIN pinname="Inital Distance" slicecount="1" values="0.8">
    </PIN>
    </NODE>
    <LINK dstnodeid="7" dstpinname="View" srcnodeid="6" srcpinname="View">
@@ -214,6 +214,80 @@
    <LINKPOINT x="645" y="4230">
    </LINKPOINT>
    <LINKPOINT x="2070" y="4230">
+   </LINKPOINT>
+   </LINK>
+   <NODE componentmode="Hidden" hiddenwhenlocked="1" id="28" nodename="GetMatrix (Transform)" systemname="GetMatrix (Transform)">
+   <BOUNDS height="100" left="1440" top="8865" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Transform" visible="1">
+   </PIN>
+   <PIN pinname="Matrix Out" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" hiddenwhenlocked="1" id="27" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
+   <BOUNDS height="0" left="1440" top="9480" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="930" left="1440" top="9480" type="Box" width="1905">
+   </BOUNDS>
+   <PIN encoded="0" pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Vector Size" slicecount="1" values="16">
+   </PIN>
+   <PIN pinname="Columns" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Y Input Value">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="27" dstpinname="Y Input Value" hiddenwhenlocked="1" srcnodeid="28" srcpinname="Matrix Out">
+   </LINK>
+   <NODE componentmode="Hidden" hiddenwhenlocked="1" id="26" nodename="GetMatrix (Transform)" systemname="GetMatrix (Transform)">
+   <BOUNDS height="100" left="4665" top="8865" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Transform" visible="1">
+   </PIN>
+   <PIN pinname="Matrix Out" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" hiddenwhenlocked="0" id="25" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
+   <BOUNDS height="0" left="4665" top="9480" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="930" left="4665" top="9480" type="Box" width="1905">
+   </BOUNDS>
+   <PIN encoded="0" pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Vector Size" slicecount="1" values="16">
+   </PIN>
+   <PIN pinname="Columns" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Y Input Value" visible="1">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="25" dstpinname="Y Input Value" srcnodeid="26" srcpinname="Matrix Out" hiddenwhenlocked="1">
+   </LINK>
+   <LINK srcnodeid="6" srcpinname="View" dstnodeid="28" dstpinname="Transform" linkstyle="Bezier" hiddenwhenlocked="1">
+   <LINKPOINT x="5295" y="6413">
+   </LINKPOINT>
+   <LINKPOINT x="1500" y="6413">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="6" srcpinname="Projection" dstnodeid="26" dstpinname="Transform" linkstyle="Bezier" hiddenwhenlocked="1">
+   <LINKPOINT x="5475" y="6420">
+   </LINKPOINT>
+   <LINKPOINT x="4695" y="6420">
    </LINKPOINT>
    </LINK>
    </PATCH>

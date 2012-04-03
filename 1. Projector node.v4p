@@ -7,7 +7,7 @@
    </BOUNDS>
    <PIN pinname="Layers" visible="1">
    </PIN>
-   <BOUNDS height="8760" left="16485" top="5895" type="Window" width="7305">
+   <BOUNDS height="12840" left="16485" top="1815" type="Window" width="7305">
    </BOUNDS>
    <PIN pinname="Mouse XYZL" visible="1">
    </PIN>
@@ -232,7 +232,7 @@
    <PIN pinname="Change" visible="1">
    </PIN>
    </NODE>
-   <LINK dstnodeid="37" dstpinname="Preview View Projection" srcnodeid="35" srcpinname="Output Node" linkstyle="Bezier">
+   <LINK dstnodeid="37" dstpinname="Preview View Projection" linkstyle="Bezier" srcnodeid="35" srcpinname="Output Node">
    <LINKPOINT x="5265" y="8655">
    </LINKPOINT>
    <LINKPOINT x="11025" y="8655">
@@ -250,7 +250,7 @@
    <LINKPOINT x="5700" y="6420">
    </LINKPOINT>
    </LINK>
-   <LINK dstnodeid="38" dstpinname="Layer 2" srcnodeid="37" srcpinname="Layer" linkstyle="VHV">
+   <LINK dstnodeid="38" dstpinname="Layer 2" linkstyle="VHV" srcnodeid="37" srcpinname="Layer">
    <LINKPOINT x="7215" y="8085">
    </LINKPOINT>
    <LINKPOINT x="1695" y="8085">
@@ -319,7 +319,7 @@
    <NODE componentmode="Hidden" filename="E:\filesets\Madlab workshop 2\vvvv\VVVV.Nodes.OpenCV\modules\CalibrateProjector (OpenCV).v4p" id="44" nodename="CalibrateProjector (OpenCV)" systemname="CalibrateProjector (OpenCV)">
    <BOUNDS height="270" left="1515" top="8580" type="Node" width="8085">
    </BOUNDS>
-   <BOUNDS height="8250" left="7290" top="345" type="Window" width="16320">
+   <BOUNDS height="8250" left="11460" top="1680" type="Window" width="16320">
    </BOUNDS>
    <PIN pinname="Projection XY" slicecount="14" visible="1" values="0.142638728022575,-0.314358562231064,-0.452659010887146,-0.140115350484848,-0.284046739339828,0.205374121665955,-0.273670583963394,0.635317087173462,0.0350194983184338,0.616122484207153,0.540856003761292,0.347409069538116,0.486381232738495,0.109404593706131">
    </PIN>
@@ -376,7 +376,7 @@
    </NODE>
    <LINK dstnodeid="46" dstpinname="Y Input Value" srcnodeid="44" srcpinname="Reprojection Error">
    </LINK>
-   <LINK dstnodeid="41" dstpinname="Current ViewProjection" srcnodeid="35" srcpinname="Output Node" linkstyle="Bezier" hiddenwhenlocked="1">
+   <LINK dstnodeid="41" dstpinname="Current ViewProjection" hiddenwhenlocked="1" linkstyle="Bezier" srcnodeid="35" srcpinname="Output Node">
    <LINKPOINT x="5205" y="9053">
    </LINKPOINT>
    <LINKPOINT x="2610" y="9053">
@@ -428,7 +428,7 @@
    </NODE>
    <LINK dstnodeid="41" dstpinname="Mouse dXYL" srcnodeid="51" srcpinname="Mouse dXYL">
    </LINK>
-   <LINK dstnodeid="51" dstpinname="Projection XY" srcnodeid="41" srcpinname="Output" linkstyle="Bezier">
+   <LINK dstnodeid="51" dstpinname="Projection XY" linkstyle="Bezier" srcnodeid="41" srcpinname="Output">
    <LINKPOINT x="2140" y="9900">
    </LINKPOINT>
    <LINKPOINT x="3620" y="9900">
@@ -452,7 +452,7 @@
    <PIN pinname="Y Input Value" slicecount="1" values="1">
    </PIN>
    </NODE>
-   <LINK dstnodeid="51" dstpinname="Calibrate" srcnodeid="52" srcpinname="Y Output Value" hiddenwhenlocked="1">
+   <LINK dstnodeid="51" dstpinname="Calibrate" hiddenwhenlocked="1" srcnodeid="52" srcpinname="Y Output Value">
    </LINK>
    <LINK dstnodeid="41" dstpinname="Reset point" hiddenwhenlocked="1" linkstyle="VHV" srcnodeid="37" srcpinname="Reset point">
    <LINKPOINT x="7065" y="7110">
@@ -460,7 +460,7 @@
    <LINKPOINT x="3900" y="7110">
    </LINKPOINT>
    </LINK>
-   <LINK dstnodeid="51" dstpinname="Index" srcnodeid="37" srcpinname="Index" linkstyle="Bezier">
+   <LINK dstnodeid="51" dstpinname="Index" linkstyle="Bezier" srcnodeid="37" srcpinname="Index">
    <LINKPOINT x="3435" y="9510">
    </LINKPOINT>
    <LINKPOINT x="5100" y="9510">
@@ -524,13 +524,13 @@
    <PIN pinname="Input 2" visible="1">
    </PIN>
    </NODE>
-   <LINK dstnodeid="54" dstpinname="Input 2" srcnodeid="44" srcpinname="View Transform" linkstyle="VHV">
+   <LINK dstnodeid="54" dstpinname="Input 2" linkstyle="VHV" srcnodeid="44" srcpinname="View Transform">
    <LINKPOINT x="1545" y="9855">
    </LINKPOINT>
    <LINKPOINT x="7185" y="9855">
    </LINKPOINT>
    </LINK>
-   <LINK dstnodeid="55" dstpinname="Input 2" srcnodeid="44" srcpinname="Projection Transform" linkstyle="VHV">
+   <LINK dstnodeid="55" dstpinname="Input 2" linkstyle="VHV" srcnodeid="44" srcpinname="Projection Transform">
    <LINKPOINT x="3555" y="9780">
    </LINKPOINT>
    <LINKPOINT x="8655" y="9780">
@@ -567,6 +567,10 @@
    </PIN>
    <PIN pinname="Transform" visible="1">
    </PIN>
+   <PIN pinname="Enabled" slicecount="1" visible="1" values="1">
+   </PIN>
+   <PIN pinname="Alpha" visible="1">
+   </PIN>
    </NODE>
    <LINK dstnodeid="51" dstpinname="Layers" srcnodeid="60" srcpinname="Layer">
    </LINK>
@@ -576,34 +580,34 @@
    <LINKPOINT x="2310" y="10485">
    </LINKPOINT>
    </LINK>
-   <LINK dstnodeid="60" dstpinname="Transform" srcnodeid="26" srcpinname="Transform Out" linkstyle="VHV">
+   <LINK dstnodeid="60" dstpinname="Transform" linkstyle="VHV" srcnodeid="26" srcpinname="Transform Out">
    <LINKPOINT x="1140" y="11910">
    </LINKPOINT>
    <LINKPOINT x="2475" y="11910">
    </LINKPOINT>
    </LINK>
-   <LINK srcnodeid="53" srcpinname="Y Output Value" dstnodeid="55" dstpinname="Switch" linkstyle="VHV">
+   <LINK dstnodeid="55" dstpinname="Switch" linkstyle="VHV" srcnodeid="53" srcpinname="Y Output Value">
    <LINKPOINT x="7545" y="10450">
    </LINKPOINT>
    <LINKPOINT x="8100" y="10535">
    </LINKPOINT>
    </LINK>
-   <LINK srcnodeid="55" srcpinname="Output" dstnodeid="51" dstpinname="Projection">
+   <LINK dstnodeid="51" dstpinname="Projection" srcnodeid="55" srcpinname="Output">
    </LINK>
-   <NODE systemname="Decompose (Transform Vector)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Decompose (Transform Vector)" componentmode="Hidden" id="69" hiddenwhenlocked="1">
-   <BOUNDS type="Node" left="6585" top="12540" width="1395" height="270">
+   <NODE componentmode="Hidden" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" hiddenwhenlocked="1" id="69" nodename="Decompose (Transform Vector)" systemname="Decompose (Transform Vector)">
+   <BOUNDS height="270" left="6585" top="12540" type="Node" width="1395">
    </BOUNDS>
    <PIN pinname="Transform In" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="54" srcpinname="Output" dstnodeid="69" dstpinname="Transform In" hiddenwhenlocked="1">
+   <LINK dstnodeid="69" dstpinname="Transform In" hiddenwhenlocked="1" srcnodeid="54" srcpinname="Output">
    </LINK>
-   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="70" systemname="IOBox (Value Advanced)" hiddenwhenlocked="1">
-   <BOUNDS type="Node" left="6585" top="12915" width="0" height="0">
+   <NODE componentmode="InABox" hiddenwhenlocked="1" id="70" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
+   <BOUNDS height="0" left="6585" top="12915" type="Node" width="0">
    </BOUNDS>
-   <BOUNDS type="Box" left="6585" top="12915" width="795" height="720">
+   <BOUNDS height="720" left="6585" top="12915" type="Box" width="795">
    </BOUNDS>
-   <PIN pinname="Units" slicecount="1" values="||" encoded="0">
+   <PIN encoded="0" pinname="Units" slicecount="1" values="||">
    </PIN>
    <PIN pinname="Precision" slicecount="1" values="4">
    </PIN>
@@ -613,17 +617,17 @@
    </PIN>
    <PIN pinname="Y Input Value">
    </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="TranslateXYZ" encoded="0">
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="TranslateXYZ">
    </PIN>
    </NODE>
-   <LINK srcnodeid="69" srcpinname="TranslateXYZ" dstnodeid="70" dstpinname="Y Input Value" hiddenwhenlocked="1">
+   <LINK dstnodeid="70" dstpinname="Y Input Value" hiddenwhenlocked="1" srcnodeid="69" srcpinname="TranslateXYZ">
    </LINK>
-   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="72" systemname="IOBox (Value Advanced)" hiddenwhenlocked="1">
-   <BOUNDS type="Node" left="7485" top="12900" width="0" height="0">
+   <NODE componentmode="InABox" hiddenwhenlocked="1" id="72" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
+   <BOUNDS height="0" left="7485" top="12900" type="Node" width="0">
    </BOUNDS>
-   <BOUNDS type="Box" left="7485" top="12900" width="795" height="720">
+   <BOUNDS height="720" left="7485" top="12900" type="Box" width="795">
    </BOUNDS>
-   <PIN pinname="Units" slicecount="1" values="||" encoded="0">
+   <PIN encoded="0" pinname="Units" slicecount="1" values="||">
    </PIN>
    <PIN pinname="Precision" slicecount="1" values="4">
    </PIN>
@@ -633,23 +637,43 @@
    </PIN>
    <PIN pinname="Y Input Value">
    </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="RotateXYZ" encoded="0">
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="RotateXYZ">
    </PIN>
    </NODE>
-   <LINK srcnodeid="69" srcpinname="RotateXYZ" dstnodeid="72" dstpinname="Y Input Value" hiddenwhenlocked="1">
+   <LINK dstnodeid="72" dstpinname="Y Input Value" hiddenwhenlocked="1" srcnodeid="69" srcpinname="RotateXYZ">
    </LINK>
-   <LINK srcnodeid="37" srcpinname="Change" dstnodeid="56" dstpinname="Input 2" linkstyle="VHV">
+   <LINK dstnodeid="56" dstpinname="Input 2" linkstyle="VHV" srcnodeid="37" srcpinname="Change">
    <LINKPOINT x="7125" y="7515">
    </LINKPOINT>
    <LINKPOINT x="10005" y="7515">
    </LINKPOINT>
    </LINK>
-   <LINK srcnodeid="45" srcpinname="Y Output Value" dstnodeid="56" dstpinname="Input 3">
+   <LINK dstnodeid="56" dstpinname="Input 3" srcnodeid="45" srcpinname="Y Output Value">
    </LINK>
-   <LINK srcnodeid="22" srcpinname="Mouse XYZL" dstnodeid="37" dstpinname="Mouse XYZL" linkstyle="Bezier">
+   <LINK dstnodeid="37" dstpinname="Mouse XYZL" linkstyle="Bezier" srcnodeid="22" srcpinname="Mouse XYZL">
    <LINKPOINT x="1140" y="8445">
    </LINKPOINT>
    <LINKPOINT x="1515" y="8445">
+   </LINKPOINT>
+   </LINK>
+   <NODE componentmode="Hidden" id="74" nodename="Switch (Value Input)" systemname="Switch (Value Input)">
+   <BOUNDS height="100" left="3390" top="10995" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Input 1" slicecount="1" values="0.2">
+   </PIN>
+   <PIN pinname="Switch" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="60" dstpinname="Alpha" srcnodeid="74" srcpinname="Output">
+   </LINK>
+   <LINK dstnodeid="74" dstpinname="Switch" linkstyle="VHV" srcnodeid="53" srcpinname="Y Output Value">
+   <LINKPOINT x="7545" y="10440">
+   </LINKPOINT>
+   <LINKPOINT x="3420" y="10440">
    </LINKPOINT>
    </LINK>
    </PATCH>
