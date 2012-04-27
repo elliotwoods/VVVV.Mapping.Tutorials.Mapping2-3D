@@ -1,4 +1,4 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45alpha27.1.dtd" >
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45alpha27.2.dtd" >
    <PATCH nodename="C:\kimchiandchips\Workshops\VVVV.Tutorials.Mapping2-3D\Subpatches\Mesh.SelectPoints.v4p" filename="C:\kimchiandchips\Workshops\VVVV.Tutorials.Mapping2-3D\Subpatches\Mesh.SelectPoints.v4p" systemname="Mesh.SelectPoints">
    <BOUNDS height="14430" left="11355" top="540" type="Window" width="10980">
    </BOUNDS>
@@ -496,28 +496,28 @@
    </NODE>
    <LINK dstnodeid="54" dstpinname="Y Input Value" srcnodeid="36" srcpinname="Reset point">
    </LINK>
-   <NODE systemname="Change (Animation)" nodename="Change (Animation)" componentmode="Hidden" id="55">
-   <BOUNDS type="Node" left="8835" top="10230" width="100" height="100">
+   <NODE componentmode="Hidden" id="55" nodename="Change (Animation)" systemname="Change (Animation)">
+   <BOUNDS height="100" left="8835" top="10230" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="OnChange" visible="1">
    </PIN>
    <PIN pinname="Input" visible="1">
    </PIN>
    </NODE>
-   <NODE systemname="OR (Boolean Spectral)" nodename="OR (Boolean Spectral)" componentmode="Hidden" id="56">
-   <BOUNDS type="Node" left="8835" top="10650" width="100" height="100">
+   <NODE componentmode="Hidden" id="56" nodename="OR (Boolean Spectral)" systemname="OR (Boolean Spectral)">
+   <BOUNDS height="100" left="8835" top="10650" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="57" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Node" left="8835" top="11685" width="0" height="0">
+   <NODE componentmode="InABox" id="57" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
+   <BOUNDS height="0" left="8835" top="11685" type="Node" width="0">
    </BOUNDS>
-   <BOUNDS type="Box" left="8835" top="11685" width="480" height="480">
+   <BOUNDS height="480" left="8835" top="11685" type="Box" width="480">
    </BOUNDS>
-   <PIN pinname="Units" slicecount="1" values="||" encoded="0">
+   <PIN encoded="0" pinname="Units" slicecount="1" values="||">
    </PIN>
    <PIN pinname="Precision" slicecount="1" values="4">
    </PIN>
@@ -525,21 +525,21 @@
    </PIN>
    <PIN pinname="Behavior" slicecount="1" values="Toggle">
    </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="Change" encoded="0">
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="Change">
    </PIN>
    <PIN pinname="Y Input Value" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="55" srcpinname="OnChange" dstnodeid="56" dstpinname="Input">
+   <LINK dstnodeid="56" dstpinname="Input" srcnodeid="55" srcpinname="OnChange">
    </LINK>
-   <LINK srcnodeid="27" srcpinname="Output" dstnodeid="55" dstpinname="Input" linkstyle="VHV">
+   <LINK dstnodeid="55" dstpinname="Input" linkstyle="VHV" srcnodeid="27" srcpinname="Output">
    <LINKPOINT x="315" y="9645">
    </LINKPOINT>
    <LINKPOINT x="8835" y="9645">
    </LINKPOINT>
    </LINK>
-   <NODE systemname="OR (Boolean)" nodename="OR (Boolean)" componentmode="Hidden" id="58">
-   <BOUNDS type="Node" left="8835" top="11010" width="960" height="270">
+   <NODE componentmode="Hidden" id="58" nodename="OR (Boolean)" systemname="OR (Boolean)">
+   <BOUNDS height="270" left="8835" top="11010" type="Node" width="960">
    </BOUNDS>
    <PIN pinname="Input 1" visible="1">
    </PIN>
@@ -548,21 +548,21 @@
    <PIN pinname="Input 2" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="56" srcpinname="Output" dstnodeid="58" dstpinname="Input 1">
+   <LINK dstnodeid="58" dstpinname="Input 1" srcnodeid="56" srcpinname="Output">
    </LINK>
-   <LINK srcnodeid="58" srcpinname="Output" dstnodeid="57" dstpinname="Y Input Value">
+   <LINK dstnodeid="57" dstpinname="Y Input Value" srcnodeid="58" srcpinname="Output">
    </LINK>
-   <NODE systemname="Change (Animation)" nodename="Change (Animation)" componentmode="Hidden" id="59">
-   <BOUNDS type="Node" left="9735" top="10215" width="100" height="100">
+   <NODE componentmode="Hidden" id="59" nodename="Change (Animation)" systemname="Change (Animation)">
+   <BOUNDS height="100" left="9735" top="10215" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="OnChange" visible="1">
    </PIN>
    <PIN pinname="Input" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="59" srcpinname="OnChange" dstnodeid="58" dstpinname="Input 2">
+   <LINK dstnodeid="58" dstpinname="Input 2" srcnodeid="59" srcpinname="OnChange">
    </LINK>
-   <LINK srcnodeid="36" srcpinname="Frame Count" dstnodeid="59" dstpinname="Input" linkstyle="Bezier">
+   <LINK dstnodeid="59" dstpinname="Input" linkstyle="Bezier" srcnodeid="36" srcpinname="Frame Count">
    <LINKPOINT x="4725" y="8865">
    </LINKPOINT>
    <LINKPOINT x="9735" y="8865">

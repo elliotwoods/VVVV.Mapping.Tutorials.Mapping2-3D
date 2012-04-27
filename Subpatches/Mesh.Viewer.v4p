@@ -111,31 +111,31 @@
    </PIN>
    <PIN pinname="Layer 2" visible="1">
    </PIN>
-   <PIN pinname="Enabled" visible="-1" pintype="Input" slicecount="1" values="1">
+   <PIN pinname="Enabled" pintype="Input" slicecount="1" visible="-1" values="1">
    </PIN>
    <PIN pinname="Layer Template Count" slicecount="1" values="2">
    </PIN>
    <PIN pinname="Layer 3" visible="1">
    </PIN>
    </NODE>
-   <NODE nodename="IOBox (Node)" componentmode="InABox" id="38" systemname="IOBox (Node)">
-   <BOUNDS type="Node" left="1965" top="4470" width="0" height="0">
+   <NODE componentmode="InABox" id="38" nodename="IOBox (Node)" systemname="IOBox (Node)">
+   <BOUNDS height="0" left="1965" top="4470" type="Node" width="0">
    </BOUNDS>
-   <BOUNDS type="Box" left="1965" top="4470" width="795" height="240">
+   <BOUNDS height="240" left="1965" top="4470" type="Box" width="795">
    </BOUNDS>
-   <PIN pinname="Descriptive Name" slicecount="1" values="Layer" encoded="0">
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="Layer">
    </PIN>
    </NODE>
-   <LINK srcnodeid="37" srcpinname="Layer" dstnodeid="38" dstpinname="Input Node">
+   <LINK dstnodeid="38" dstpinname="Input Node" srcnodeid="37" srcpinname="Layer">
    </LINK>
-   <LINK srcnodeid="15" srcpinname="Layer" dstnodeid="37" dstpinname="Layer 3" linkstyle="VHV">
+   <LINK dstnodeid="37" dstpinname="Layer 3" linkstyle="VHV" srcnodeid="15" srcpinname="Layer">
    <LINKPOINT x="6150" y="3728">
    </LINKPOINT>
    <LINKPOINT x="3885" y="3728">
    </LINKPOINT>
    </LINK>
-   <NODE systemname="Mesh.Viewer.RandomLight" filename="Mesh.Viewer.RandomLight.v4p" nodename="Mesh.Viewer.RandomLight.v4p" componentmode="Hidden" id="48">
-   <BOUNDS type="Node" left="2565" top="2490" width="2490" height="270">
+   <NODE componentmode="Hidden" filename="Mesh.Viewer.RandomLight.v4p" id="48" nodename="Mesh.Viewer.RandomLight.v4p" systemname="Mesh.Viewer.RandomLight">
+   <BOUNDS height="270" left="2565" top="2490" type="Node" width="2490">
    </BOUNDS>
    <PIN pinname="Layer" visible="1">
    </PIN>
@@ -143,10 +143,10 @@
    </PIN>
    <PIN pinname="Light Direction XYZ" visible="1">
    </PIN>
-   <BOUNDS type="Window" left="11910" top="5955" width="4200" height="6570">
+   <BOUNDS height="6570" left="11910" top="5955" type="Window" width="4200">
    </BOUNDS>
    </NODE>
-   <LINK srcnodeid="48" srcpinname="Layer" dstnodeid="37" dstpinname="Layer 1">
+   <LINK dstnodeid="37" dstpinname="Layer 1" srcnodeid="48" srcpinname="Layer">
    </LINK>
    <NODE componentmode="Hidden" filename="%VVVV%\lib\nodes\effects\GouraudDirectional.fx" id="18" nodename="GouraudDirectional (EX9.Effect)" systemname="GouraudDirectional (EX9.Effect)">
    <BOUNDS height="270" left="1950" top="3015" type="Node" width="2850">
@@ -176,10 +176,10 @@
    <LINKPOINT x="2265" y="2220">
    </LINKPOINT>
    </LINK>
-   <LINK srcnodeid="48" srcpinname="Light Direction XYZ" dstnodeid="18" dstpinname="Light Direction XYZ">
+   <LINK dstnodeid="18" dstpinname="Light Direction XYZ" srcnodeid="48" srcpinname="Light Direction XYZ">
    </LINK>
-   <LINK srcnodeid="15" srcpinname="Layer" dstnodeid="37" dstpinname="Layer 2">
+   <LINK dstnodeid="37" dstpinname="Layer 2" srcnodeid="15" srcpinname="Layer">
    </LINK>
-   <LINK srcnodeid="18" srcpinname="Layer" dstnodeid="37" dstpinname="Layer 1">
+   <LINK dstnodeid="37" dstpinname="Layer 1" srcnodeid="18" srcpinname="Layer">
    </LINK>
    </PATCH>

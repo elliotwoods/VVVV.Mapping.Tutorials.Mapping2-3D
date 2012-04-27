@@ -1,13 +1,13 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45alpha27.1.dtd" >
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45alpha27.2.dtd" >
    <PATCH nodename="C:\kimchiandchips\Workshops\VVVV.Tutorials.Mapping2-3D\Subpatches\Renderer.Projection.v4p" filename="C:\kimchiandchips\Workshops\VVVV.Tutorials.Mapping2-3D\Subpatches\Renderer.Projection.v4p" systemname="Renderer.Projection">
    <BOUNDS height="10290" left="10350" top="3480" type="Window" width="7815">
    </BOUNDS>
-   <NODE componentmode="InAWindow" id="7" nodename="Renderer (EX9)" systemname="Renderer (EX9)">
+   <NODE componentmode="FullScreen" id="7" nodename="Renderer (EX9)" systemname="Renderer (EX9)">
    <BOUNDS height="270" left="1140" top="4515" type="Node" width="5355">
    </BOUNDS>
    <BOUNDS height="1800" left="1140" top="4515" type="Box" width="2400">
    </BOUNDS>
-   <BOUNDS height="6810" left="0" top="8340" type="Window" width="11850">
+   <BOUNDS height="6810" left="30270" top="3510" type="Window" width="11850">
    </BOUNDS>
    <PIN pinname="Layers" slicecount="1" visible="1" values="||">
    </PIN>
@@ -23,7 +23,13 @@
    </PIN>
    <PIN pinname="Projection" slicecount="1" values="||">
    </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="Projection" encoded="0">
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="Projection">
+   </PIN>
+   <PIN pinname="Windowed Antialiasing Quality Level" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Fullscreen Antialiasing Quality Level" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Fullscreen Dimensions" slicecount="1" values="|1024 x 768|">
    </PIN>
    </NODE>
    <NODE componentmode="Hidden" id="6" nodename="Vector (2d Join)" systemname="Vector (2d Join)">
@@ -288,6 +294,8 @@
    <PIN pinname="Output" visible="1">
    </PIN>
    <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Input Count" slicecount="1" values="2">
    </PIN>
    </NODE>
    <LINK dstnodeid="17" dstpinname="Input 1" srcnodeid="4" srcpinname="Output">
