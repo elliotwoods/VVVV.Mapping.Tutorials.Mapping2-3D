@@ -1,6 +1,6 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45alpha27.1.dtd" >
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45alpha28.dtd" >
    <PATCH nodename="C:\kimchiandchips\Workshops\VVVV.Tutorials.Mapping2-3D\Subpatches\Mesh.SelectPoints.Markers.v4p" filename="C:\kimchiandchips\Workshops\VVVV.Tutorials.Mapping2-3D\Subpatches\Mesh.SelectPoints.Markers.v4p" systemname="Mesh.SelectPoints.Markers">
-   <BOUNDS height="8325" left="9840" top="2895" type="Window" width="8055">
+   <BOUNDS height="8325" left="9840" top="2895" type="Window" width="8715">
    </BOUNDS>
    <NODE componentmode="Hidden" id="2" nodename="Sphere (DX9)" systemname="Sphere (DX9)">
    <BOUNDS height="100" left="1125" top="6195" type="Node" width="100">
@@ -47,7 +47,7 @@
    </BOUNDS>
    <PIN pinname="Y Input Value">
    </PIN>
-   <PIN pinname="Units" slicecount="1" values="||" encoded="0">
+   <PIN pinname="Units" slicecount="1" encoded="0" values="||">
    </PIN>
    <PIN pinname="Precision" slicecount="1" values="4">
    </PIN>
@@ -55,7 +55,7 @@
    </PIN>
    <PIN pinname="Rows" slicecount="1" values="3">
    </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="|Translate XYZ|" encoded="0">
+   <PIN pinname="Descriptive Name" slicecount="1" encoded="0" values="|Translate XYZ|">
    </PIN>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
@@ -115,7 +115,7 @@
    </BOUNDS>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="Scale" encoded="0">
+   <PIN pinname="Descriptive Name" slicecount="1" encoded="0" values="Scale">
    </PIN>
    <PIN pinname="Y Input Value" slicecount="1" values="0.03">
    </PIN>
@@ -203,7 +203,7 @@
    </BOUNDS>
    <PIN pinname="Y Input Value" visible="1" slicecount="1" values="0">
    </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="Index" encoded="0">
+   <PIN pinname="Descriptive Name" slicecount="1" encoded="0" values="Index">
    </PIN>
    <PIN pinname="X Input Value" slicecount="1" values="0">
    </PIN>
@@ -248,6 +248,10 @@
    <PIN pinname="Render State" visible="1">
    </PIN>
    <PIN pinname="Font" slicecount="1" values="Arial">
+   </PIN>
+   <PIN pinname="Color" visible="1" slicecount="1" values="|1.00000,1.00000,1.00000,0.80000|">
+   </PIN>
+   <PIN pinname="Brush Color" visible="1" slicecount="1" values="|0.00000,0.00000,0.00000,0.70000|">
    </PIN>
    </NODE>
    <NODE systemname="Group (EX9)" nodename="Group (EX9)" componentmode="Hidden" id="19">
@@ -331,7 +335,7 @@
    </BOUNDS>
    <PIN pinname="Transform Out" visible="1">
    </PIN>
-   <PIN pinname="XYZ" slicecount="1" values="0.05">
+   <PIN pinname="XYZ" slicecount="1" values="0.02">
    </PIN>
    <PIN pinname="Transform In" visible="1">
    </PIN>
@@ -389,9 +393,9 @@
    </PIN>
    <PIN pinname="Input Count" slicecount="1" values="3">
    </PIN>
-   <PIN pinname="Input 1" slicecount="1" values="| |" encoded="0">
+   <PIN pinname="Input 1" slicecount="1" encoded="0" values="| |">
    </PIN>
-   <PIN pinname="Input 3" slicecount="1" values="| |" encoded="0">
+   <PIN pinname="Input 3" slicecount="1" encoded="0" values="| |">
    </PIN>
    </NODE>
    <NODE systemname="Translate (Transform)" nodename="Translate (Transform)" componentmode="Hidden" id="29">

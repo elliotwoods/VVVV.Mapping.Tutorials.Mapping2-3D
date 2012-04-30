@@ -1,4 +1,4 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45alpha27.1.dtd" >
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45alpha28.dtd" >
    <PATCH nodename="C:\kimchiandchips\Workshops\VVVV.Tutorials.Mapping2-3D\modules\Mouse Cursor (DX9).v4p" filename="C:\kimchiandchips\Workshops\VVVV.Tutorials.Mapping2-3D\Modules\Mouse Cursor (DX9).v4p" systemname="Mouse Cursor (DX9)">
    <BOUNDS height="6000" left="17805" top="7815" type="Window" width="4650">
    </BOUNDS>
@@ -125,7 +125,7 @@
    </PIN>
    <PIN pinname="Y" visible="1">
    </PIN>
-   <PIN pinname="Z" visible="1">
+   <PIN pinname="Z" visible="1" slicecount="1" values="-1">
    </PIN>
    <PIN pinname="XYZ" visible="1">
    </PIN>
@@ -133,8 +133,6 @@
    <LINK dstnodeid="0" dstpinname="X" srcnodeid="1" srcpinname="X">
    </LINK>
    <LINK dstnodeid="0" dstpinname="Y" srcnodeid="1" srcpinname="Y">
-   </LINK>
-   <LINK dstnodeid="0" dstpinname="Z" srcnodeid="1" srcpinname="Z">
    </LINK>
    <LINK dstnodeid="8" dstpinname="XYZ" srcnodeid="0" srcpinname="XYZ">
    </LINK>

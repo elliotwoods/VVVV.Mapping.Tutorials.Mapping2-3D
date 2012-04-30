@@ -1,6 +1,6 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45alpha27.1.dtd" >
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45alpha28.dtd" >
    <PATCH nodename="C:\kimchiandchips\Workshops\VVVV.Tutorials.Mapping2-3D\Subpatches\Projection.SelectPoints.Markers.v4p" filename="C:\kimchiandchips\Workshops\VVVV.Tutorials.Mapping2-3D\Subpatches\Projection.SelectPoints.Markers.v4p" systemname="Projection.SelectPoints.Markers">
-   <BOUNDS height="7710" left="11415" top="5565" type="Window" width="9000">
+   <BOUNDS height="7695" left="11415" top="5565" type="Window" width="4620">
    </BOUNDS>
    <NODE componentmode="Hidden" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" id="0" nodename="Renderer (SVG)" systemname="Renderer (SVG)">
    <BOUNDS height="100" left="1560" top="4590" type="Node" width="100">
@@ -25,6 +25,10 @@
    </PIN>
    <PIN pinname="Enabled" visible="1">
    </PIN>
+   <PIN pinname="Color" visible="1">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
    </NODE>
    <NODE componentmode="Hidden" id="3" nodename="SetAlpha (Color)" systemname="SetAlpha (Color)">
    <BOUNDS height="100" left="2175" top="3750" type="Node" width="100">
@@ -43,9 +47,9 @@
    </BOUNDS>
    <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="Layer">
    </PIN>
+   <PIN pinname="Input Node" visible="1">
+   </PIN>
    </NODE>
-   <LINK dstnodeid="4" dstpinname="Input Node" srcnodeid="2" srcpinname="Layer">
-   </LINK>
    <NODE componentmode="InABox" id="5" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
    <BOUNDS height="100" left="720" top="375" type="Node" width="100">
    </BOUNDS>
@@ -145,7 +149,7 @@
    <LINK dstnodeid="7" dstpinname="XY" srcnodeid="5" srcpinname="Y Output Value">
    </LINK>
    <NODE componentmode="Hidden" id="14" nodename="UniformScale (Transform)" systemname="UniformScale (Transform)">
-   <BOUNDS height="100" left="180" top="5160" type="Node" width="100">
+   <BOUNDS height="100" left="180" top="5130" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Transform Out" visible="1">
    </PIN>
@@ -155,9 +159,9 @@
    </PIN>
    </NODE>
    <LINK dstnodeid="2" dstpinname="Transform" linkstyle="VHV" srcnodeid="14" srcpinname="Transform Out">
-   <LINKPOINT x="290" y="5548">
+   <LINKPOINT x="290" y="5528">
    </LINKPOINT>
-   <LINKPOINT x="1330" y="5538">
+   <LINKPOINT x="1330" y="5528">
    </LINKPOINT>
    </LINK>
    <NODE componentmode="Hidden" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" id="1" nodename="SVGTexture (EX9.Texture)" systemname="SVGTexture (EX9.Texture)">
@@ -197,7 +201,7 @@
    </PIN>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="Enabled" encoded="0">
+   <PIN pinname="Descriptive Name" slicecount="1" encoded="0" values="Enabled">
    </PIN>
    </NODE>
    <LINK srcnodeid="16" srcpinname="Y Output Value" dstnodeid="2" dstpinname="Enabled" linkstyle="VHV">
@@ -233,5 +237,21 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="18" srcpinname="Transform Out" dstnodeid="14" dstpinname="Transform In">
+   </LINK>
+   <NODE systemname="HSL (Color Join)" nodename="HSL (Color Join)" componentmode="Hidden" id="19">
+   <BOUNDS type="Node" left="2640" top="5130" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Alpha" slicecount="1" values="0.8">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="19" srcpinname="Output" dstnodeid="2" dstpinname="Color" linkstyle="VHV">
+   <LINKPOINT x="2640" y="5528">
+   </LINKPOINT>
+   <LINKPOINT x="2250" y="5528">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="2" srcpinname="Layer" dstnodeid="4" dstpinname="Input Node">
    </LINK>
    </PATCH>
