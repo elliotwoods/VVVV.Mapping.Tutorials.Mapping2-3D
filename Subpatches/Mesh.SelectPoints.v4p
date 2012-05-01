@@ -478,7 +478,7 @@
    <LINKPOINT x="3180" y="8955">
    </LINKPOINT>
    </LINK>
-   <NODE systemname="cursor (EX9)" filename="..\modules\3d big cursor (EX9).v4p" nodename="cursor (EX9)" componentmode="InAWindow" id="108">
+   <NODE systemname="cursor (EX9)" filename="..\modules\3d big cursor (EX9).v4p" nodename="cursor (EX9)" componentmode="Hidden" id="108">
    <BOUNDS type="Node" left="2910" top="13620" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Layer" visible="1">
