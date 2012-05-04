@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45alpha28.dtd" >
-   <PATCH nodename="C:\kimchiandchips\Workshops\VVVV.Tutorials.Mapping2-3D\Modules\LoadViewProjection.v4p" systemname="LoadViewProjection" filename="C:\kimchiandchips\Workshops\VVVV.Tutorials.Mapping2-3D\Modules\LoadViewProjection.v4p">
-   <BOUNDS type="Window" left="7920" top="7260" width="5940" height="8115">
+   <PATCH nodename="C:\kimchiandchips\Workshops\VVVV.Tutorials.Mapping2-3D\modules\LoadViewProjection.v4p" systemname="LoadViewProjection" filename="C:\kimchiandchips\Workshops\VVVV.Tutorials.Mapping2-3D\Modules\LoadViewProjection.v4p">
+   <BOUNDS type="Window" left="7920" top="7260" width="7305" height="8115">
    </BOUNDS>
    <NODE systemname="Separate (String)" nodename="Separate (String)" componentmode="Hidden" id="16">
    <BOUNDS type="Node" left="1110" top="5175" width="100" height="100">
@@ -193,7 +193,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="2070" top="1935" width="1590" height="240">
    </BOUNDS>
-   <PIN pinname="Input Enum" slicecount="1" values="Space">
+   <PIN pinname="Input Enum" slicecount="1" values="NewLineAutoDetection">
    </PIN>
    <PIN pinname="Output Enum" visible="1">
    </PIN>
@@ -261,6 +261,8 @@
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" encoded="0" values="Read">
    </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="0">
+   </PIN>
    </NODE>
    <LINK srcnodeid="18" srcpinname="Y Output Value" dstnodeid="17" dstpinname="Read" linkstyle="VHV">
    <LINKPOINT x="1485" y="1118">
@@ -273,7 +275,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="3255" top="300" width="795" height="240">
    </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" encoded="0" values="file.txt">
+   <PIN pinname="Input String" slicecount="1" encoded="0" values="..\matrices.mat">
    </PIN>
    <PIN pinname="Default" slicecount="1" encoded="0" values="file.txt">
    </PIN>
@@ -292,4 +294,72 @@
    <LINKPOINT x="1170" y="1058">
    </LINKPOINT>
    </LINK>
+   <NODE systemname="GetMatrix (Transform)" nodename="GetMatrix (Transform)" componentmode="Hidden" id="20">
+   <BOUNDS type="Node" left="1260" top="7365" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Transform" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="7" srcpinname="Transform Out" dstnodeid="20" dstpinname="Transform">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="21" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Node" left="1275" top="7965" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="1275" top="7965" width="3180" height="960">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||" encoded="0">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Vector Size" slicecount="1" values="16">
+   </PIN>
+   <PIN pinname="Columns" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Y Input Value">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="20" srcpinname="Matrix Out" dstnodeid="21" dstpinname="Y Input Value">
+   </LINK>
+   <NODE systemname="GetMatrix (Transform)" nodename="GetMatrix (Transform)" componentmode="Hidden" id="23">
+   <BOUNDS type="Node" left="4485" top="7410" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Transform" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="22" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Node" left="4500" top="8010" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="4500" top="8010" width="3180" height="960">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" encoded="0" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Vector Size" slicecount="1" values="16">
+   </PIN>
+   <PIN pinname="Columns" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Y Input Value">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="23" srcpinname="Matrix Out" dstnodeid="22" dstpinname="Y Input Value">
+   </LINK>
+   <LINK srcnodeid="4" srcpinname="Transform Out" dstnodeid="23" dstpinname="Transform">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="24" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="7275" top="6705" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="7275" top="6705" width="7635" height="2625">
+   </BOUNDS>
+   <PIN pinname="Default" slicecount="1" encoded="0" values="text">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" encoded="0" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   </NODE>
    </PATCH>

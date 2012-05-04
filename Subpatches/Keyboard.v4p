@@ -2,12 +2,6 @@
    <PATCH nodename="C:\kimchiandchips\Workshops\VVVV.Tutorials.Mapping2-3D\Subpatches\Keyboard.v4p" systemname="Mesh.SelectPoints.Keyboard" filename="C:\kimchiandchips\Workshops\VVVV.Tutorials.Mapping2-3D\Subpatches\Mesh.SelectPoints.Keyboard.v4p">
    <BOUNDS type="Window" left="10650" top="7380" width="12330" height="5415">
    </BOUNDS>
-   <NODE systemname="Keyboard (System Window)" nodename="Keyboard (System Window)" componentmode="Hidden" id="1">
-   <BOUNDS type="Node" left="1380" top="240" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Keyboard Output" visible="1">
-   </PIN>
-   </NODE>
    <NODE systemname="KeyMatch (String)" nodename="KeyMatch (String)" componentmode="Hidden" id="0">
    <BOUNDS type="Node" left="1380" top="885" width="7755" height="270">
    </BOUNDS>
@@ -28,8 +22,6 @@
    <PIN pinname="&lt;SPACE&gt; Output" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="1" srcpinname="Keyboard Output" dstnodeid="0" dstpinname="Input">
-   </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="2" systemname="IOBox (Value Advanced)">
    <BOUNDS type="Node" left="5250" top="2955" width="0" height="0">
    </BOUNDS>
@@ -219,7 +211,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="9630" top="2955" width="480" height="480">
    </BOUNDS>
-   <PIN pinname="Units" slicecount="1" values="||" encoded="0">
+   <PIN pinname="Units" slicecount="1" encoded="0" values="||">
    </PIN>
    <PIN pinname="Precision" slicecount="1" values="4">
    </PIN>
@@ -227,7 +219,7 @@
    </PIN>
    <PIN pinname="Behavior" slicecount="1" values="Toggle">
    </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="&lt;SHIFT&gt;" encoded="0">
+   <PIN pinname="Descriptive Name" slicecount="1" encoded="0" values="&lt;SHIFT&gt;">
    </PIN>
    </NODE>
    <LINK srcnodeid="0" srcpinname="&lt;SHIFT&gt; Output" dstnodeid="16" dstpinname="Y Input Value" linkstyle="VHV">
@@ -235,5 +227,13 @@
    </LINKPOINT>
    <LINKPOINT x="9645" y="2055">
    </LINKPOINT>
+   </LINK>
+   <NODE systemname="Keyboard (System Window)" nodename="Keyboard (System Window)" componentmode="Hidden" id="1">
+   <BOUNDS type="Node" left="1380" top="240" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Keyboard Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="1" srcpinname="Keyboard Output" dstnodeid="0" dstpinname="Input">
    </LINK>
    </PATCH>

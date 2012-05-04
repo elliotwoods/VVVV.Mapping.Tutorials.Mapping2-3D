@@ -2,12 +2,12 @@
    <PATCH nodename="C:\kimchiandchips\Workshops\VVVV.Tutorials.Mapping2-3D\Subpatches\Renderer.Projection.v4p" filename="C:\kimchiandchips\Workshops\VVVV.Tutorials.Mapping2-3D\Subpatches\Renderer.Projection.v4p" systemname="Renderer.Projection">
    <BOUNDS height="7695" left="10350" top="3480" type="Window" width="6915">
    </BOUNDS>
-   <NODE componentmode="InAWindow" id="7" nodename="Renderer (EX9)" systemname="Renderer (EX9)">
+   <NODE componentmode="FullScreen" id="7" nodename="Renderer (EX9)" systemname="Renderer (EX9)">
    <BOUNDS height="270" left="600" top="1890" type="Node" width="5355">
    </BOUNDS>
    <BOUNDS height="1800" left="600" top="1890" type="Box" width="2400">
    </BOUNDS>
-   <BOUNDS height="8640" left="0" top="8595" type="Window" width="11595">
+   <BOUNDS height="8640" left="33120" top="3360" type="Window" width="11595">
    </BOUNDS>
    <PIN pinname="Layers" visible="1">
    </PIN>

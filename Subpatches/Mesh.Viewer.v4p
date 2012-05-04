@@ -1,4 +1,4 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45alpha27.1.dtd" >
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45alpha28.dtd" >
    <PATCH nodename="C:\kimchiandchips\Workshops\VVVV.Tutorials.Mapping2-3D\Subpatches\Mesh.Viewer.v4p" filename="C:\kimchiandchips\Workshops\VVVV.Tutorials.Mapping2-3D\Subpatches\Mesh.Viewer.v4p" systemname="Mesh.Viewer">
    <BOUNDS height="5655" left="10140" top="5460" type="Window" width="8850">
    </BOUNDS>
@@ -107,7 +107,7 @@
    <NODE componentmode="Hidden" id="37" nodename="Group (EX9)" systemname="Group (EX9)">
    <BOUNDS height="270" left="1965" top="3780" type="Node" width="4260">
    </BOUNDS>
-   <PIN pinname="Layer 1" visible="1">
+   <PIN pinname="Layer 1" visible="1" slicecount="1" values="||">
    </PIN>
    <PIN pinname="Layer 2" visible="1">
    </PIN>
@@ -134,28 +134,20 @@
    <LINKPOINT x="3885" y="3728">
    </LINKPOINT>
    </LINK>
-   <NODE componentmode="Hidden" filename="Mesh.Viewer.RandomLight.v4p" id="48" nodename="Mesh.Viewer.RandomLight.v4p" systemname="Mesh.Viewer.RandomLight">
-   <BOUNDS height="270" left="2565" top="2490" type="Node" width="2490">
-   </BOUNDS>
-   <PIN pinname="Layer" visible="1">
-   </PIN>
-   <PIN pinname="Light Position XYZ" visible="1">
-   </PIN>
-   <PIN pinname="Light Direction XYZ" visible="1">
-   </PIN>
-   <BOUNDS height="6570" left="11910" top="5955" type="Window" width="4200">
-   </BOUNDS>
-   </NODE>
    <LINK dstnodeid="37" dstpinname="Layer 1" srcnodeid="48" srcpinname="Layer">
    </LINK>
-   <NODE componentmode="Hidden" filename="%VVVV%\lib\nodes\effects\GouraudDirectional.fx" id="18" nodename="GouraudDirectional (EX9.Effect)" systemname="GouraudDirectional (EX9.Effect)">
-   <BOUNDS height="270" left="1950" top="3015" type="Node" width="2850">
-   </BOUNDS>
+   <LINK dstnodeid="37" dstpinname="Layer 2" srcnodeid="15" srcpinname="Layer">
+   </LINK>
+   <NODE id="18" componentmode="Hidden" filename="%VVVV%\lib\nodes\effects\GouraudDirectional.fx" nodename="GouraudDirectional (EX9.Effect)" systemname="GouraudDirectional (EX9.Effect)">
    <PIN pinname="Mesh" visible="1">
    </PIN>
-   <PIN pinname="Layer" visible="1">
-   </PIN>
    <PIN pinname="Transform" visible="1">
+   </PIN>
+   <PIN pinname="Light Direction XYZ" slicecount="3" visible="1" values="-0.412209331989288,-0.0362290106713772,0.529631435871124">
+   </PIN>
+   <BOUNDS type="Node" height="270" left="1950" top="3015" width="2850">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1">
    </PIN>
    <PIN pinname="Light Position XYZ" visible="1">
    </PIN>
@@ -165,21 +157,15 @@
    </PIN>
    <PIN pinname="Light Attenuation 0">
    </PIN>
-   <PIN pinname="Light Direction XYZ" visible="1">
-   </PIN>
    </NODE>
-   <LINK dstnodeid="18" dstpinname="Mesh" srcnodeid="20" srcpinname="Output Node">
+   <LINK srcnodeid="18" srcpinname="Layer" dstnodeid="37" dstpinname="Layer 1">
    </LINK>
-   <LINK dstnodeid="18" dstpinname="Transform" hiddenwhenlocked="1" linkstyle="VHV" srcnodeid="21" srcpinname="Output Node">
+   <LINK srcnodeid="21" srcpinname="Output Node" dstnodeid="18" dstpinname="Transform" hiddenwhenlocked="1" linkstyle="VHV">
    <LINKPOINT x="1185" y="1770">
    </LINKPOINT>
    <LINKPOINT x="2265" y="2220">
    </LINKPOINT>
    </LINK>
-   <LINK dstnodeid="18" dstpinname="Light Direction XYZ" srcnodeid="48" srcpinname="Light Direction XYZ">
-   </LINK>
-   <LINK dstnodeid="37" dstpinname="Layer 2" srcnodeid="15" srcpinname="Layer">
-   </LINK>
-   <LINK dstnodeid="37" dstpinname="Layer 1" srcnodeid="18" srcpinname="Layer">
+   <LINK srcnodeid="20" srcpinname="Output Node" dstnodeid="18" dstpinname="Mesh">
    </LINK>
    </PATCH>

@@ -1,5 +1,5 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45alpha27.1.dtd" >
-   <PATCH nodename="C:\kimchiandchips\Workshops\VVVV.Tutorials.Mapping2-3D\Modules\Intersect (3d Vector Ex9.Geometry).v4p" filename="C:\kimchiandchips\Workshops\VVVV.Tutorials.Mapping2-3D\Modules\Intersect (3d Vector Ex9.Geometry).v4p" systemname="Intersect (3d Vector Ex9.Geometry)">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45alpha28.dtd" >
+   <PATCH nodename="C:\kimchiandchips\Workshops\VVVV.Tutorials.Mapping2-3D\modules\Intersect (3d Vector Ex9.Geometry).v4p" filename="C:\kimchiandchips\Workshops\VVVV.Tutorials.Mapping2-3D\Modules\Intersect (3d Vector Ex9.Geometry).v4p" systemname="Intersect (3d Vector Ex9.Geometry)">
    <BOUNDS height="8520" left="15210" top="5385" type="Window" width="9000">
    </BOUNDS>
    <NODE id="16" nodename="Inverse (Transform)" systemname="Inverse (Transform)">
@@ -190,50 +190,6 @@
    <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="|Intersection Point XYZ|">
    </PIN>
    </NODE>
-   <NODE systemname="Add (Value)" nodename="Add (Value)" componentmode="Hidden" id="23">
-   <BOUNDS type="Node" left="2400" top="4875" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Input 1" visible="1">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   <PIN pinname="Input 2" visible="1" slicecount="1" values="0">
-   </PIN>
-   </NODE>
-   <NODE systemname="Vector (3d Split)" nodename="Vector (3d Split)" componentmode="Hidden" id="24">
-   <BOUNDS type="Node" left="1620" top="4230" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="XYZ" visible="1">
-   </PIN>
-   <PIN pinname="X" visible="1">
-   </PIN>
-   <PIN pinname="Y" visible="1">
-   </PIN>
-   <PIN pinname="Z" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="1" srcpinname="Intersection Point XYZ" dstnodeid="24" dstpinname="XYZ">
-   </LINK>
-   <NODE systemname="Vector (3d Join)" nodename="Vector (3d Join)" componentmode="Hidden" id="25">
-   <BOUNDS type="Node" left="1635" top="4710" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="X" visible="1">
-   </PIN>
-   <PIN pinname="Y" visible="1">
-   </PIN>
-   <PIN pinname="XYZ" visible="1">
-   </PIN>
-   <PIN pinname="Z" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="24" srcpinname="X" dstnodeid="25" dstpinname="X">
-   </LINK>
-   <LINK srcnodeid="24" srcpinname="Y" dstnodeid="25" dstpinname="Y">
-   </LINK>
-   <LINK srcnodeid="24" srcpinname="Z" dstnodeid="23" dstpinname="Input 1">
-   </LINK>
-   <LINK srcnodeid="24" srcpinname="Z" dstnodeid="25" dstpinname="Z">
-   </LINK>
    <LINK srcnodeid="1" srcpinname="Intersection Point XYZ" dstnodeid="21" dstpinname="Y Input Value">
    </LINK>
    </PATCH>

@@ -389,7 +389,7 @@
    </BOUNDS>
    <PIN pinname="Rows" slicecount="1" values="3">
    </PIN>
-   <PIN pinname="Y Input Value" slicecount="3" values="0.007,-0.06,0" visible="1">
+   <PIN pinname="Y Input Value" slicecount="3" visible="1" values="0.007,-0.06,0">
    </PIN>
    <PIN pinname="Vector Size" slicecount="1" values="3">
    </PIN>
@@ -437,7 +437,7 @@
    </PIN>
    <PIN pinname="Behavior" slicecount="1" values="Toggle">
    </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="WithinProjection" encoded="0">
+   <PIN pinname="Descriptive Name" slicecount="1" encoded="0" values="WithinProjection">
    </PIN>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>

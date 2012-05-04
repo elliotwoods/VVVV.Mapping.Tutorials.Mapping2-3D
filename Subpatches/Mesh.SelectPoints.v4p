@@ -2,14 +2,14 @@
    <PATCH nodename="C:\kimchiandchips\Workshops\VVVV.Tutorials.Mapping2-3D\Subpatches\Mesh.SelectPoints.v4p" filename="C:\kimchiandchips\Workshops\VVVV.Tutorials.Mapping2-3D\Subpatches\Mesh.SelectPoints.v4p" systemname="Mesh.SelectPoints" locked="0">
    <BOUNDS height="14685" left="12390" top="1665" type="Window" width="13905">
    </BOUNDS>
-   <NODE componentmode="Hidden" filename="..\Modules\Intersect (3d Vector Ex9.Geometry).v4p" id="0" nodename="Intersect (3d Vector Ex9.Geometry)" systemname="Intersect (3d Vector Ex9.Geometry)">
+   <NODE componentmode="Hidden" filename="..\Modules\Intersect (3d Vector Ex9.Geometry Alt).v4p" id="0" nodename="Intersect (3d Vector Ex9.Geometry Alt)" systemname="Intersect (3d Vector Ex9.Geometry Alt)">
    <BOUNDS height="270" left="1350" top="3855" type="Node" width="5325">
    </BOUNDS>
-   <BOUNDS height="8520" left="15210" top="5385" type="Window" width="9000">
+   <BOUNDS height="9195" left="9420" top="5175" type="Window" width="9000">
    </BOUNDS>
-   <PIN pinname="View Projection" visible="1">
+   <PIN pinname="View Projection" visible="1" slicecount="1" values="||">
    </PIN>
-   <PIN pinname="Mouse XYZ" visible="1">
+   <PIN pinname="Mouse XYZ" visible="1" slicecount="2" values="0,0">
    </PIN>
    <PIN pinname="Transform Mesh" slicecount="1" values="||">
    </PIN>
@@ -65,7 +65,7 @@
    </PIN>
    <PIN pinname="Rows" slicecount="1" values="3">
    </PIN>
-   <PIN pinname="Y Input Value">
+   <PIN pinname="Y Input Value" slicecount="6" values="0,0,0,0,0,0">
    </PIN>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
@@ -86,8 +86,6 @@
    <PIN pinname="Input 3" visible="1">
    </PIN>
    </NODE>
-   <LINK dstnodeid="22" dstpinname="Input 1" srcnodeid="0" srcpinname="Mouse Over">
-   </LINK>
    <NODE componentmode="Hidden" id="45" nodename="Keyboard (System Global)" systemname="Keyboard (System Global)">
    <BOUNDS height="100" left="4350" top="4395" type="Node" width="100">
    </BOUNDS>
@@ -195,6 +193,8 @@
    </PIN>
    <PIN pinname="Zoom multiplier" slicecount="1" values="10">
    </PIN>
+   <BOUNDS type="Box" width="4800" height="3600">
+   </BOUNDS>
    </NODE>
    <NODE componentmode="Hidden" filename="Mesh.Viewer.v4p" id="90" nodename="Subpatches\Mesh.Viewer.v4p" systemname="Mesh.Viewer">
    <BOUNDS height="270" left="405" top="1650" type="Node" width="2730">
@@ -677,7 +677,7 @@
    </PIN>
    <PIN pinname="Clear" visible="1">
    </PIN>
-   <PIN pinname="Input Bin Size" slicecount="1" values="3">
+   <PIN pinname="Input Bin Size" slicecount="1" values="5">
    </PIN>
    <PIN pinname="Insert" visible="1">
    </PIN>
@@ -955,7 +955,7 @@
    <LINK srcnodeid="135" srcpinname="Output" dstnodeid="22" dstpinname="Input 3">
    </LINK>
    <NODE id="132" nodename="IOBox (Value Advanced)" componentmode="InABox" systemname="IOBox (Value Advanced)">
-   <PIN pinname="Y Input Value">
+   <PIN pinname="Y Input Value" visible="1">
    </PIN>
    <BOUNDS type="Node" left="660" top="4740" width="0" height="0">
    </BOUNDS>
@@ -970,8 +970,6 @@
    <PIN pinname="Behavior" slicecount="1" values="Toggle">
    </PIN>
    </NODE>
-   <LINK srcnodeid="0" srcpinname="Mouse Over" dstnodeid="132" dstpinname="Y Input Value">
-   </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="140" systemname="IOBox (Value Advanced)">
    <BOUNDS type="Node" left="3105" top="15255" width="0" height="0">
    </BOUNDS>
@@ -979,7 +977,7 @@
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" values="0">
    </PIN>
-   <PIN pinname="Units" slicecount="1" values="||" encoded="0">
+   <PIN pinname="Units" slicecount="1" encoded="0" values="||">
    </PIN>
    <PIN pinname="Precision" slicecount="1" values="4">
    </PIN>
@@ -987,7 +985,7 @@
    </PIN>
    <PIN pinname="Behavior" slicecount="1" values="Toggle">
    </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="Zoom" encoded="0">
+   <PIN pinname="Descriptive Name" slicecount="1" encoded="0" values="Zoom">
    </PIN>
    </NODE>
    <LINK srcnodeid="140" srcpinname="Y Output Value" dstnodeid="89" dstpinname="Zoom">
@@ -997,5 +995,19 @@
    <LINK srcnodeid="89" srcpinname="View Projection" dstnodeid="101" dstpinname="View Projection">
    </LINK>
    <LINK srcnodeid="89" srcpinname="View Projection" dstnodeid="124" dstpinname="View Projection">
+   </LINK>
+   <NODE systemname="OR (Boolean Spectral)" nodename="OR (Boolean Spectral)" componentmode="Hidden" id="141">
+   <BOUNDS type="Node" left="1350" top="5235" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Input" visible="1" slicecount="2" values="0,0">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="141" srcpinname="Output" dstnodeid="22" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="0" srcpinname="Mouse Over" dstnodeid="141" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="141" srcpinname="Output" dstnodeid="132" dstpinname="Y Input Value">
    </LINK>
    </PATCH>
