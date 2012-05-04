@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45alpha28.dtd" >
    <PATCH nodename="C:\kimchiandchips\Workshops\VVVV.Tutorials.Mapping2-3D\modules\Mouse Cursor (DX9).v4p" filename="C:\kimchiandchips\Workshops\VVVV.Tutorials.Mapping2-3D\Modules\Mouse Cursor (DX9).v4p" systemname="Mouse Cursor (DX9)">
-   <BOUNDS height="6000" left="17805" top="7815" type="Window" width="4650">
+   <BOUNDS height="6075" left="17805" top="7815" type="Window" width="4095">
    </BOUNDS>
    <NODE componentmode="Hidden" id="10" nodename="WithinProjection (Transform)" systemname="WithinProjection (Transform)">
    <BOUNDS height="100" left="675" top="2610" type="Node" width="100">
@@ -15,7 +15,7 @@
    </PIN>
    <PIN pinname="Transform Out" visible="1">
    </PIN>
-   <PIN pinname="XYZ" visible="1">
+   <PIN pinname="XYZ" visible="1" slicecount="1" values="0.015">
    </PIN>
    </NODE>
    <NODE componentmode="Hidden" id="8" nodename="Translate (Transform Vector)" systemname="Translate (Transform Vector)">
@@ -37,37 +37,13 @@
    </BOUNDS>
    <PIN pinname="Output" visible="1">
    </PIN>
-   <PIN pinname="Lightness" visible="1">
+   <PIN pinname="Lightness" visible="1" slicecount="1" values="1">
    </PIN>
    <PIN pinname="Hue" visible="1" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Alpha" visible="1">
    </PIN>
    </NODE>
-   <NODE componentmode="Hidden" id="6" nodename="Vector (2d Join)" systemname="Vector (2d Join)">
-   <BOUNDS height="100" left="2445" top="3195" type="Node" width="100">
-   </BOUNDS>
-   <PIN pinname="XY" visible="1">
-   </PIN>
-   <PIN pinname="X" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="Y" slicecount="1" values="0.5">
-   </PIN>
-   </NODE>
-   <LINK dstnodeid="7" dstpinname="Lightness" srcnodeid="6" srcpinname="XY">
-   </LINK>
-   <NODE componentmode="Hidden" id="5" nodename="Vector (2d Join)" systemname="Vector (2d Join)">
-   <BOUNDS height="100" left="1650" top="3195" type="Node" width="100">
-   </BOUNDS>
-   <PIN pinname="XY" visible="1">
-   </PIN>
-   <PIN pinname="X" slicecount="1" values="0.015">
-   </PIN>
-   <PIN pinname="Y" slicecount="1" values="0.01">
-   </PIN>
-   </NODE>
-   <LINK dstnodeid="9" dstpinname="XYZ" srcnodeid="5" srcpinname="XY">
-   </LINK>
    <NODE componentmode="Hidden" filename="" id="4" nodename="Quad (DX9)" systemname="Quad (DX9)">
    <BOUNDS height="100" left="495" top="4125" type="Node" width="100">
    </BOUNDS>
@@ -80,6 +56,8 @@
    <PIN pinname="Resolution">
    </PIN>
    <PIN pinname="Render State" visible="1">
+   </PIN>
+   <PIN pinname="Enabled">
    </PIN>
    </NODE>
    <LINK dstnodeid="4" dstpinname="Transform" srcnodeid="9" srcpinname="Transform Out">
@@ -170,28 +148,14 @@
    </NODE>
    <LINK dstnodeid="12" dstpinname="Input Node" srcnodeid="4" srcpinname="Layer">
    </LINK>
-   <NODE systemname="Vector (2d Join)" nodename="Vector (2d Join)" componentmode="Hidden" id="13">
-   <BOUNDS type="Node" left="3210" top="3180" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="XY" visible="1">
-   </PIN>
-   <PIN pinname="X" slicecount="1" values="1.23">
-   </PIN>
-   <PIN pinname="Y" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="13" srcpinname="XY" dstnodeid="7" dstpinname="Alpha" linkstyle="VHV">
-   <LINKPOINT x="3210" y="3533">
-   </LINKPOINT>
-   <LINKPOINT x="2685" y="3533">
-   </LINKPOINT>
-   </LINK>
    <NODE systemname="Fill (EX9.RenderState)" nodename="Fill (EX9.RenderState)" componentmode="Hidden" id="14">
    <BOUNDS type="Node" left="195" top="3645" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Render State Out" visible="1">
    </PIN>
-   <PIN pinname="Fill Mode">
+   <PIN pinname="Fill Mode" slicecount="1" values="WireFrame">
+   </PIN>
+   <PIN pinname="Render State In" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="14" srcpinname="Render State Out" dstnodeid="4" dstpinname="Render State" linkstyle="VHV">
@@ -200,38 +164,54 @@
    <LINKPOINT x="480" y="4005">
    </LINKPOINT>
    </LINK>
-   <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="15" systemname="IOBox (Enumerations)">
-   <BOUNDS type="Node" left="120" top="1650" width="0" height="0">
-   </BOUNDS>
-   <BOUNDS type="Box" left="120" top="1650" width="1155" height="465">
-   </BOUNDS>
-   <PIN pinname="Input Enum" slicecount="2" values="WireFrame,Solid">
-   </PIN>
-   <PIN pinname="Rows" slicecount="1" values="2">
-   </PIN>
-   <PIN pinname="SliceCount Mode" slicecount="1" values="Input">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="15" srcpinname="Output Enum" dstnodeid="14" dstpinname="Fill Mode" linkstyle="VHV">
-   <LINKPOINT x="150" y="2880">
-   </LINKPOINT>
-   <LINKPOINT x="540" y="2880">
-   </LINKPOINT>
-   </LINK>
    <NODE systemname="NOT (Boolean)" nodename="NOT (Boolean)" componentmode="Hidden" id="16">
-   <BOUNDS type="Node" left="3780" top="2820" width="100" height="100">
+   <BOUNDS type="Node" left="2625" top="2955" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Output" visible="1">
    </PIN>
    <PIN pinname="Input" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="16" srcpinname="Output" dstnodeid="13" dstpinname="Y">
-   </LINK>
    <LINK srcnodeid="1" srcpinname="W" dstnodeid="16" dstpinname="Input" linkstyle="VHV">
-   <LINKPOINT x="2355" y="2348">
+   <LINKPOINT x="1970" y="2393">
    </LINKPOINT>
-   <LINKPOINT x="3780" y="2348">
+   <LINKPOINT x="3010" y="2438">
+   </LINKPOINT>
+   </LINK>
+   <NODE systemname="ZWriteEnable (EX9.RenderState)" nodename="ZWriteEnable (EX9.RenderState)" componentmode="Hidden" id="17">
+   <BOUNDS type="Node" left="210" top="1035" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Render State Out" visible="1">
+   </PIN>
+   <PIN pinname="ZWrite Enable" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="17" srcpinname="Render State Out" dstnodeid="14" dstpinname="Render State In">
+   </LINK>
+   <LINK srcnodeid="16" srcpinname="Output" dstnodeid="7" dstpinname="Alpha">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="18" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Node" left="2655" top="315" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="2655" top="315" width="480" height="480">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||" encoded="0">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Enabled" encoded="0">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="18" srcpinname="Y Output Value" dstnodeid="4" dstpinname="Enabled" linkstyle="Bezier">
+   <LINKPOINT x="2670" y="2460">
+   </LINKPOINT>
+   <LINKPOINT x="1665" y="2460">
    </LINKPOINT>
    </LINK>
    </PATCH>

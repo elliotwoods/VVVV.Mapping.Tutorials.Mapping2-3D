@@ -1,4 +1,4 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45alpha27.1.dtd" >
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45alpha28.dtd" >
    <PATCH nodename="C:\kimchiandchips\Workshops\VVVV.Tutorials.Mapping2-3D\Subpatches\Mesh.Viewer.RandomLight.v4p" filename="C:\kimchiandchips\Workshops\VVVV.Tutorials.Mapping2-3D\Subpatches\Mesh.Viewer.RandomLight.v4p" systemname="Mesh.Viewer.RandomLight">
    <BOUNDS height="6570" left="11910" top="5955" type="Window" width="4200">
    </BOUNDS>
@@ -89,6 +89,8 @@
    </PIN>
    <PIN pinname="XYZ" visible="1">
    </PIN>
+   <PIN pinname="Transform In" visible="1">
+   </PIN>
    </NODE>
    <LINK dstnodeid="11" dstpinname="Transform" srcnodeid="12" srcpinname="Transform Out">
    </LINK>
@@ -125,13 +127,27 @@
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" values="5">
    </PIN>
-   <PIN pinname="Units" slicecount="1" values="s" encoded="0">
+   <PIN pinname="Units" slicecount="1" encoded="0" values="s">
    </PIN>
    <PIN pinname="Precision" slicecount="1" values="4">
    </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="Period" encoded="0">
+   <PIN pinname="Descriptive Name" slicecount="1" encoded="0" values="Period">
    </PIN>
    </NODE>
    <LINK srcnodeid="14" srcpinname="Y Output Value" dstnodeid="0" dstpinname="Period">
+   </LINK>
+   <NODE systemname="Translate (Transform)" nodename="Translate (Transform)" componentmode="Hidden" id="15">
+   <BOUNDS type="Node" left="630" top="2340" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Transform Out" visible="1">
+   </PIN>
+   <PIN pinname="Z" slicecount="1" values="1.44">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="15" srcpinname="Transform Out" dstnodeid="12" dstpinname="Transform In" linkstyle="VHV">
+   <LINKPOINT x="675" y="2993">
+   </LINKPOINT>
+   <LINKPOINT x="1050" y="2993">
+   </LINKPOINT>
    </LINK>
    </PATCH>

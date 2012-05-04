@@ -1,6 +1,6 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45alpha27.1.dtd" >
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45alpha28.dtd" >
    <PATCH nodename="C:\kimchiandchips\Workshops\VVVV.Tutorials.Mapping2-3D\modules\Spin cursor mesh (EX9).v4p">
-   <BOUNDS height="8835" left="3765" top="2595" type="Window" width="11775">
+   <BOUNDS height="8835" left="9300" top="4365" type="Window" width="11775">
    </BOUNDS>
    <NODE componentmode="Hidden" id="19" nodename="VertexBuffer (EX9.Geometry Join)" systemname="VertexBuffer (EX9.Geometry Join)">
    <BOUNDS height="0" left="1350" top="3015" type="Node" width="0">
@@ -19,6 +19,8 @@
    </PIN>
    <PIN pinname="Mesh" visible="1">
    </PIN>
+   <PIN pinname="Apply" slicecount="1" visible="1" values="1">
+   </PIN>
    </NODE>
    <LINK dstnodeid="18" dstpinname="Vertex Buffer" srcnodeid="19" srcpinname="Vertex Buffer">
    </LINK>
@@ -30,6 +32,8 @@
    <PIN pinname="X" visible="1">
    </PIN>
    <PIN pinname="Y" visible="1">
+   </PIN>
+   <PIN pinname="Z" slicecount="1" values="0">
    </PIN>
    </NODE>
    <LINK dstnodeid="18" dstpinname="Indices" srcnodeid="17" srcpinname="XYZ">
@@ -152,6 +156,8 @@
    <PIN pinname="Render State Out" visible="1">
    </PIN>
    <PIN pinname="Fill Mode" slicecount="1" values="WireFrame">
+   </PIN>
+   <PIN pinname="Render State In" visible="1">
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="7" nodename="IOBOX (VALUE ADVANCED)" systemname="IOBox (Value Advanced)">
@@ -299,5 +305,15 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="29" srcpinname="Transform Out" dstnodeid="6" dstpinname="Transform">
+   </LINK>
+   <NODE systemname="ZWriteEnable (EX9.RenderState)" nodename="ZWriteEnable (EX9.RenderState)" componentmode="Hidden" id="31">
+   <BOUNDS type="Node" left="570" top="4560" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Render State Out" visible="1">
+   </PIN>
+   <PIN pinname="ZWrite Enable" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="31" srcpinname="Render State Out" dstnodeid="8" dstpinname="Render State In">
    </LINK>
    </PATCH>
