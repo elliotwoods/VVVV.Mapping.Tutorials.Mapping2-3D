@@ -1,7 +1,7 @@
 # Introduction
 Methods and tutorials for projection mapping 3D objects where a physical mesh of the object is available. In the tutorials we use ReconstructMe to create a mesh using a kinect to 3D scan a scene (http://reconstructme.net).
 
-# Methods
+# Methods present
 
 ## CalibrateProjector
 
@@ -16,7 +16,9 @@ Using OpenCV's CalibrateCamera method to find the intrinsics and extrinsics of t
 * vvvv24.1
 * OpenCV plugins (available at http://vvvv.org/contribution/opencv-plugin-%28alpha%29 )
 
-## Homography + Position
+# Methods not present
+
+## Homography + Position (
 
 Homography and an arbitrary perspective are used to define the Projection matrix and the rotation element of the View matrix. This leaves 1 unknown (projector position) which can then be rapidly tweaked into position by the user
 
@@ -27,5 +29,6 @@ Homography and an arbitrary perspective are used to define the Projection matrix
 
 ### Prerequisites
 
-* vvvv24.1
+* vvvv27.2 http://vvvv.org/downloads
+* VVVV.Nodes.OpenCV http://vvvv.org/sites/all/modules/general/pubdlcnt/pubdlcnt.php?file=http://vvvv.org/sites/default/files/uploads/VVVV.Nodes_.OpenCV_2.zip&nid=71857
 
