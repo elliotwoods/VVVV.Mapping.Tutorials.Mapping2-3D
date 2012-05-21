@@ -109,9 +109,9 @@
    </LINKPOINT>
    </LINK>
    <NODE componentmode="InABox" id="45" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
-   <BOUNDS height="0" left="10245" top="11190" type="Node" width="0">
+   <BOUNDS height="0" left="10845" top="11190" type="Node" width="0">
    </BOUNDS>
-   <BOUNDS height="765" left="10245" top="11190" type="Box" width="810">
+   <BOUNDS height="765" left="10845" top="11190" type="Box" width="810">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" values="0">
    </PIN>
@@ -177,7 +177,7 @@
    <NODE componentmode="Hidden" filename="Subpatches\Renderer.Projection.v4p" id="51" nodename="Subpatches\Renderer.Projection.v4p" systemname="Renderer.Projection">
    <BOUNDS height="270" left="1065" top="18000" type="Node" width="7500">
    </BOUNDS>
-   <BOUNDS height="7695" left="10350" top="3480" type="Window" width="6915">
+   <BOUNDS height="7695" left="12765" top="3690" type="Window" width="6915">
    </BOUNDS>
    <PIN pinname="Mouse dXYL" visible="1">
    </PIN>
@@ -297,15 +297,15 @@
    <NODE systemname="Mesh" filename="Subpatches\Mesh.v4p" nodename="Subpatches\Mesh.v4p" componentmode="Hidden" id="77">
    <BOUNDS type="Node" left="165" top="3105" width="3765" height="270">
    </BOUNDS>
-   <PIN pinname="Filename" visible="1" slicecount="1" encoded="0" values="Media\toys-optimised.x">
+   <PIN pinname="Filename" visible="1" encoded="0" slicecount="1" values="Media\scene.x">
    </PIN>
-   <PIN pinname="Translate XYZ" slicecount="3" values="-0.16,0.82,0">
+   <PIN pinname="Translate XYZ" slicecount="3" values="-0.94,0,1.05">
    </PIN>
-   <PIN pinname="Scale XYZ" visible="1" slicecount="1" values="0.001">
+   <PIN pinname="Scale XYZ" visible="1" slicecount="1" values="0.0001">
    </PIN>
-   <PIN pinname="Rotate XYZ" slicecount="3" values="0.24,-0.02,0">
+   <PIN pinname="Rotate XYZ" slicecount="3" values="0.25,0.1,0.08">
    </PIN>
-   <BOUNDS type="Window" left="6945" top="6555" width="12900" height="5280">
+   <BOUNDS type="Window" left="12075" top="8415" width="12900" height="5280">
    </BOUNDS>
    <PIN pinname="Preview" visible="1">
    </PIN>
@@ -595,9 +595,9 @@
    </PIN>
    <PIN pinname="SliceCount Mode" slicecount="1" values="ColsRowsPages">
    </PIN>
-   <PIN pinname="X Input Value" slicecount="5" values="0,0,0,1,1">
+   <PIN pinname="X Input Value" slicecount="5" values="1,1,1,0,0">
    </PIN>
-   <PIN pinname="Y Input Value" slicecount="5" values="0,0,0,1,1">
+   <PIN pinname="Y Input Value" slicecount="5" values="1,1,1,0,0">
    </PIN>
    <PIN pinname="Columns" slicecount="1" values="5">
    </PIN>
@@ -617,9 +617,9 @@
    </PIN>
    <PIN pinname="SliceCount Mode" slicecount="1" values="ColsRowsPages">
    </PIN>
-   <PIN pinname="X Input Value" slicecount="5" values="1,1,1,0,0">
+   <PIN pinname="X Input Value" slicecount="5" values="0,0,0,1,1">
    </PIN>
-   <PIN pinname="Y Input Value" slicecount="5" values="1,1,1,0,0">
+   <PIN pinname="Y Input Value" slicecount="5" values="0,0,0,1,1">
    </PIN>
    <PIN pinname="Columns" slicecount="1" values="5">
    </PIN>
@@ -683,7 +683,7 @@
    </LINKPOINT>
    </LINK>
    <NODE systemname="OR (Boolean)" nodename="OR (Boolean)" componentmode="Hidden" id="111">
-   <BOUNDS type="Node" left="9300" top="12180" width="1020" height="270">
+   <BOUNDS type="Node" left="9300" top="12180" width="1620" height="270">
    </BOUNDS>
    <PIN pinname="Input 1" visible="1">
    </PIN>
@@ -691,15 +691,17 @@
    </PIN>
    <PIN pinname="Input 2" visible="1">
    </PIN>
+   <PIN pinname="Input Count" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Input 3" visible="1">
+   </PIN>
    </NODE>
    <LINK srcnodeid="110" srcpinname="Output" dstnodeid="111" dstpinname="Input 1">
    </LINK>
-   <LINK srcnodeid="45" srcpinname="Y Output Value" dstnodeid="111" dstpinname="Input 2">
-   </LINK>
-   <NODE componentmode="Hidden" filename="%VVVV%\addonpack\lib\nodes\modules\Image\OpenCV\CalibrateProjector (OpenCV).v4p" id="44" nodename="CalibrateProjector (OpenCV)" systemname="CalibrateProjector (OpenCV)">
+   <NODE componentmode="Hidden" filename="%VVVV%\addonpack\lib\nodes\modules\Image\OpenCV\CalibrateProjector (OpenCV).v4p" id="44" nodename="CalibrateProjector (OpenCV)" systemname="CalibrateProjector (OpenCV)" stayontop="0">
    <BOUNDS height="270" left="1275" top="12765" type="Node" width="8085">
    </BOUNDS>
-   <BOUNDS height="8250" left="8040" top="3420" type="Window" width="16320">
+   <BOUNDS height="8250" left="2850" top="3465" type="Window" width="16320">
    </BOUNDS>
    <PIN pinname="Projection XY" visible="1">
    </PIN>
@@ -741,10 +743,6 @@
    </LINKPOINT>
    <LINKPOINT x="2790" y="14033">
    </LINKPOINT>
-   </LINK>
-   <LINK srcnodeid="107" srcpinname="Output" dstnodeid="44" dstpinname="World XYZ">
-   </LINK>
-   <LINK srcnodeid="108" srcpinname="Output" dstnodeid="44" dstpinname="Projection XY">
    </LINK>
    <LINK srcnodeid="111" srcpinname="Output" dstnodeid="44" dstpinname="Solve">
    </LINK>
@@ -1189,5 +1187,19 @@
    </LINKPOINT>
    <LINKPOINT x="750" y="15953">
    </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="107" srcpinname="Output" dstnodeid="44" dstpinname="Projection XY">
+   </LINK>
+   <LINK srcnodeid="108" srcpinname="Output" dstnodeid="44" dstpinname="World XYZ">
+   </LINK>
+   <LINK srcnodeid="45" srcpinname="Y Output Value" dstnodeid="111" dstpinname="Input 3">
+   </LINK>
+   <NODE systemname="OnOpen (VVVV)" nodename="OnOpen (VVVV)" componentmode="Hidden" id="138">
+   <BOUNDS type="Node" left="10080" top="11685" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Bang" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="138" srcpinname="Bang" dstnodeid="111" dstpinname="Input 2">
    </LINK>
    </PATCH>

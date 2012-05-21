@@ -1,59 +1,66 @@
 <?xml version="1.0" standalone="yes"?>
 <DocumentElement>
   <SpreadTable>
-    <WorldX>-0.21876811981201172</WorldX>
-    <WorldY>0.0244903564453125</WorldY>
-    <WorldZ>-0.20334625244140625</WorldZ>
-    <ProjX>-0.58744195622782514</ProjX>
-    <ProjY>-0.56262417361820227</ProjY>
+    <WorldX>-1.7690877914428711</WorldX>
+    <WorldY>0.4203643798828125</WorldY>
+    <WorldZ>-2.0320682525634766</WorldZ>
+    <ProjX>-0.533465329258323</ProjX>
+    <ProjY>-0.6156809505920332</ProjY>
   </SpreadTable>
   <SpreadTable>
-    <WorldX>-0.0016956329345703125</WorldX>
-    <WorldY>0.053070068359375</WorldY>
-    <WorldZ>0.077869415283203125</WorldZ>
-    <ProjX>0.51721762588296838</ProjX>
-    <ProjY>-0.016056137375601576</ProjY>
+    <WorldX>0.11158180236816406</WorldX>
+    <WorldY>0.41404533386230469</WorldY>
+    <WorldZ>-1.9898958206176758</WorldZ>
+    <ProjX>0.090037077964663259</ProjX>
+    <ProjY>-0.32224307611215525</ProjY>
   </SpreadTable>
   <SpreadTable>
-    <WorldX>-0.18105983734130859</WorldX>
-    <WorldY>0.081842422485351562</WorldY>
-    <WorldZ>0.078660964965820312</WorldZ>
-    <ProjX>-0.038391583976595291</ProjX>
-    <ProjY>0.3529475905360579</ProjY>
+    <WorldX>1.73211669921875</WorldX>
+    <WorldY>0.25477790832519531</WorldY>
+    <WorldZ>-2.1233711242675781</WorldZ>
+    <ProjX>0.62889843581359084</ProjX>
+    <ProjY>-0.20059888850523583</ProjY>
   </SpreadTable>
   <SpreadTable>
-    <WorldX>-0.2912445068359375</WorldX>
-    <WorldY>0.028900146484375</WorldY>
-    <WorldZ>-0.039365768432617188</WorldZ>
-    <ProjX>-0.558500128127962</ProjX>
-    <ProjY>0.01561093145818725</ProjY>
+    <WorldX>-1.2592382431030273</WorldX>
+    <WorldY>0.36619186401367188</WorldY>
+    <WorldZ>1.1656360626220703</WorldZ>
+    <ProjX>-0.53126111675567289</ProjX>
+    <ProjY>0.25684214456606724</ProjY>
   </SpreadTable>
   <SpreadTable>
-    <WorldX>-0.29306888580322266</WorldX>
-    <WorldY>0.033960342407226562</WorldY>
-    <WorldZ>0.0010585784912109375</WorldZ>
-    <ProjX>-0.48468816248902152</ProjX>
-    <ProjY>0.11926422561318495</ProjY>
+    <WorldX>0.74457931518554688</WorldX>
+    <WorldY>1.1633701324462891</WorldY>
+    <WorldZ>0.6279296875</WorldZ>
+    <ProjX>0.02411423866306581</ProjX>
+    <ProjY>0.67246961868726318</ProjY>
   </SpreadTable>
   <SpreadTable>
-    <WorldX>0.068151473999023438</WorldX>
-    <WorldY>0.033990859985351562</WorldY>
-    <WorldZ>-0.10682392120361328</WorldZ>
-    <ProjX>0.5243112829074128</ProjX>
-    <ProjY>-0.66822995492967507</ProjY>
+    <WorldX>-1.1732177734375</WorldX>
+    <WorldY>1.2759342193603516</WorldY>
+    <WorldZ>1.3018779754638672</WorldZ>
+    <ProjX>-0.58710430000534508</ProjX>
+    <ProjY>0.62003432234076428</ProjY>
   </SpreadTable>
   <SpreadTable>
-    <WorldX>-0.11654758453369141</WorldX>
-    <WorldY>0.036325454711914062</WorldY>
-    <WorldZ>-0.036143302917480469</WorldZ>
-    <ProjX>-0.017008797653958928</ProjX>
-    <ProjY>-0.18383311603650585</ProjY>
+    <WorldX>1.3239479064941406</WorldX>
+    <WorldY>0.31676864624023438</WorldY>
+    <WorldZ>-0.32909965515136719</WorldZ>
+    <ProjX>0.33022095871286294</ProjX>
+    <ProjY>0.21041687969434067</ProjY>
   </SpreadTable>
   <SpreadTable>
-    <WorldX>0.031763076782226562</WorldX>
-    <WorldY>0.038217544555664062</WorldY>
-    <WorldZ>-0.048563957214355469</WorldZ>
-    <ProjX>0.47130179660411181</ProjX>
-    <ProjY>-0.43890162610012984</ProjY>
+    <WorldX>0.35811233520507812</WorldX>
+    <WorldY>0.5854949951171875</WorldY>
+    <WorldZ>-1.0904464721679688</WorldZ>
+    <ProjX>0.086159833036690947</ProjX>
+    <ProjY>0.013731810858538793</ProjY>
+  </SpreadTable>
+  <SpreadTable>
+    <WorldX>0.1792449951171875</WorldX>
+    <WorldY>0.37182044982910156</WorldY>
+    <WorldZ>-0.44363021850585938</WorldZ>
+    <ProjX>-0.020825662793826489</ProjX>
+    <ProjY>0.084923210596323184</ProjY>
   </SpreadTable>
 </DocumentElement>

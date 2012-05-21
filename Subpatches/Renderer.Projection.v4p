@@ -1,13 +1,13 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45alpha28.dtd" >
    <PATCH nodename="C:\kimchiandchips\Workshops\VVVV.Tutorials.Mapping2-3D\Subpatches\Renderer.Projection.v4p" filename="C:\kimchiandchips\Workshops\VVVV.Tutorials.Mapping2-3D\Subpatches\Renderer.Projection.v4p" systemname="Renderer.Projection">
-   <BOUNDS height="7695" left="10350" top="3480" type="Window" width="6915">
+   <BOUNDS height="7695" left="12765" top="3690" type="Window" width="6915">
    </BOUNDS>
-   <NODE componentmode="FullScreen" id="7" nodename="Renderer (EX9)" systemname="Renderer (EX9)">
+   <NODE componentmode="InAWindow" id="7" nodename="Renderer (EX9)" systemname="Renderer (EX9)">
    <BOUNDS height="270" left="600" top="1890" type="Node" width="5355">
    </BOUNDS>
    <BOUNDS height="1800" left="600" top="1890" type="Box" width="2400">
    </BOUNDS>
-   <BOUNDS height="8640" left="33120" top="3360" type="Window" width="11595">
+   <BOUNDS height="6405" left="0" top="7695" type="Window" width="11550">
    </BOUNDS>
    <PIN pinname="Layers" visible="1">
    </PIN>
@@ -211,6 +211,8 @@
    </PIN>
    <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="View">
    </PIN>
+   <PIN pinname="Output Node" visible="1">
+   </PIN>
    </NODE>
    <LINK dstnodeid="7" dstpinname="View" srcnodeid="23" srcpinname="Output Node">
    </LINK>
@@ -222,6 +224,8 @@
    <PIN pinname="Input Node" slicecount="1" values="||">
    </PIN>
    <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="Projection">
+   </PIN>
+   <PIN pinname="Output Node" visible="1">
    </PIN>
    </NODE>
    <LINK dstnodeid="7" dstpinname="Projection" linkstyle="VHV" srcnodeid="24" srcpinname="Output Node">

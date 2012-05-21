@@ -87,7 +87,7 @@
    </PIN>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="|Light position|" encoded="0">
+   <PIN pinname="Descriptive Name" slicecount="1" encoded="0" values="|Light position|">
    </PIN>
    </NODE>
    <LINK dstnodeid="4" dstpinname="Position XYZ" linkstyle="VHV" srcnodeid="12" srcpinname="Y Output Value">
@@ -203,7 +203,7 @@
    </PIN>
    <PIN pinname="Power" slicecount="1" values="25">
    </PIN>
-   <PIN pinname="Light Attenuation 2" slicecount="1" values="100">
+   <PIN pinname="Light Attenuation 2" slicecount="1" values="0.2">
    </PIN>
    </NODE>
    <LINK dstnodeid="27" dstpinname="Layer 2" srcnodeid="28" srcpinname="Layer">
@@ -344,18 +344,6 @@
    </LINK>
    <LINK dstnodeid="37" dstpinname="Layers" srcnodeid="38" srcpinname="Layer">
    </LINK>
-   <NODE componentmode="Hidden" id="56" nodename="Sphere (EX9.Geometry)" systemname="Sphere (EX9.Geometry)">
-   <BOUNDS height="100" left="735" top="4080" type="Node" width="100">
-   </BOUNDS>
-   <PIN pinname="Mesh" visible="1">
-   </PIN>
-   <PIN pinname="Radius" slicecount="1" values="0.15">
-   </PIN>
-   <PIN pinname="Resolution X">
-   </PIN>
-   <PIN pinname="Resolution Y" visible="1">
-   </PIN>
-   </NODE>
    <NODE componentmode="InABox" id="72" nodename="IOBox (String)" systemname="IOBox (String)">
    <BOUNDS height="0" left="1035" top="390" type="Node" width="0">
    </BOUNDS>
@@ -534,26 +522,6 @@
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
    </NODE>
-   <NODE componentmode="InABox" id="88" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
-   <BOUNDS height="0" left="1200" top="3180" type="Node" width="0">
-   </BOUNDS>
-   <BOUNDS height="240" left="1200" top="3180" type="Box" width="345">
-   </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" values="5">
-   </PIN>
-   <PIN encoded="0" pinname="Units" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Precision" slicecount="1" values="4">
-   </PIN>
-   <PIN pinname="Value Type" slicecount="1" values="Integer">
-   </PIN>
-   <PIN pinname="Y Output Value" visible="1">
-   </PIN>
-   </NODE>
-   <LINK dstnodeid="56" dstpinname="Resolution X" srcnodeid="88" srcpinname="Y Output Value">
-   </LINK>
-   <LINK dstnodeid="56" dstpinname="Resolution Y" srcnodeid="88" srcpinname="Y Output Value">
-   </LINK>
    <NODE componentmode="InABox" id="92" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
    <BOUNDS height="0" left="12045" top="3630" type="Node" width="0">
    </BOUNDS>
@@ -1195,7 +1163,7 @@
    </BOUNDS>
    <PIN pinname="Input Node" slicecount="1" values="||">
    </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="Mesh" encoded="0">
+   <PIN pinname="Descriptive Name" slicecount="1" encoded="0" values="Mesh">
    </PIN>
    </NODE>
    <LINK srcnodeid="138" srcpinname="Output Node" dstnodeid="121" dstpinname="Input 1">
@@ -1207,7 +1175,7 @@
    </BOUNDS>
    <PIN pinname="Input Node" slicecount="4" values=",,,">
    </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="Transform" encoded="0">
+   <PIN pinname="Descriptive Name" slicecount="1" encoded="0" values="Transform">
    </PIN>
    </NODE>
    <LINK srcnodeid="139" srcpinname="Output Node" dstnodeid="126" dstpinname="Input 1">
@@ -1219,7 +1187,7 @@
    </BOUNDS>
    <PIN pinname="Input Node" slicecount="1" values="||">
    </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="View" encoded="0">
+   <PIN pinname="Descriptive Name" slicecount="1" encoded="0" values="View">
    </PIN>
    <PIN pinname="Output Node" visible="1">
    </PIN>
@@ -1233,7 +1201,7 @@
    </BOUNDS>
    <PIN pinname="Input Node" slicecount="1" values="||">
    </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="Projection" encoded="0">
+   <PIN pinname="Descriptive Name" slicecount="1" encoded="0" values="Projection">
    </PIN>
    <PIN pinname="Output Node" visible="1">
    </PIN>
@@ -1269,7 +1237,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="4545" top="13755" width="795" height="240">
    </BOUNDS>
-   <PIN pinname="Descriptive Name" slicecount="1" values="Layer" encoded="0">
+   <PIN pinname="Descriptive Name" slicecount="1" encoded="0" values="Layer">
    </PIN>
    <PIN pinname="Input Node" visible="1">
    </PIN>
@@ -1299,7 +1267,7 @@
    </BOUNDS>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="|Backbuffer Width|" encoded="0">
+   <PIN pinname="Descriptive Name" slicecount="1" encoded="0" values="|Backbuffer Width|">
    </PIN>
    <PIN pinname="Y Input Value" slicecount="1" values="1024">
    </PIN>
@@ -1315,7 +1283,7 @@
    </BOUNDS>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="|Backbuffer Height|" encoded="0">
+   <PIN pinname="Descriptive Name" slicecount="1" encoded="0" values="|Backbuffer Height|">
    </PIN>
    <PIN pinname="Y Input Value" slicecount="1" values="768">
    </PIN>
@@ -1333,7 +1301,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="6510" top="13860" width="795" height="240">
    </BOUNDS>
-   <PIN pinname="Descriptive Name" slicecount="1" values="Preview" encoded="0">
+   <PIN pinname="Descriptive Name" slicecount="1" encoded="0" values="Preview">
    </PIN>
    </NODE>
    <LINK srcnodeid="145" srcpinname="Layer" dstnodeid="150" dstpinname="Input Node">
