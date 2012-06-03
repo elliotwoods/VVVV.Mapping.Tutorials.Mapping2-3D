@@ -15,7 +15,7 @@
    </PIN>
    <PIN pinname="Mesh" visible="1">
    </PIN>
-   <BOUNDS height="14685" left="12390" top="1665" type="Window" width="13905">
+   <BOUNDS height="14685" left="6810" top="615" type="Window" width="13905">
    </BOUNDS>
    <PIN pinname="Layer" visible="1">
    </PIN>
@@ -701,7 +701,7 @@
    <NODE componentmode="Hidden" filename="%VVVV%\addonpack\lib\nodes\modules\Image\OpenCV\CalibrateProjector (OpenCV).v4p" id="44" nodename="CalibrateProjector (OpenCV)" systemname="CalibrateProjector (OpenCV)" stayontop="0">
    <BOUNDS height="270" left="1275" top="12765" type="Node" width="8085">
    </BOUNDS>
-   <BOUNDS height="8250" left="2850" top="3465" type="Window" width="16320">
+   <BOUNDS height="8250" left="720" top="3765" type="Window" width="16320">
    </BOUNDS>
    <PIN pinname="Projection XY" visible="1">
    </PIN>
