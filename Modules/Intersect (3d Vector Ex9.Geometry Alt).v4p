@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45alpha28.dtd" >
    <PATCH nodename="C:\kimchiandchips\Workshops\VVVV.Tutorials.Mapping2-3D\modules\Intersect (3d Vector Ex9.Geometry Alt).v4p" filename="C:\kimchiandchips\Workshops\VVVV.Tutorials.Mapping2-3D\Modules\Intersect (3d Vector Ex9.Geometry Alt).v4p" systemname="Intersect (3d Vector Ex9.Geometry Alt)">
-   <BOUNDS height="11955" left="7875" top="2040" type="Window" width="9510">
+   <BOUNDS height="11955" left="11565" top="2115" type="Window" width="9510">
    </BOUNDS>
    <NODE componentmode="InABox" id="15" nodename="IOBox (Node)" systemname="IOBox (Node)">
    <BOUNDS height="0" left="2670" top="180" type="Node" width="0">
@@ -120,6 +120,8 @@
    <PIN pinname="Background Color" visible="1" slicecount="1" values="|0.00000,0.00000,0.00000,0.00000|">
    </PIN>
    <PIN pinname="Windowed Depthbuffer Format" slicecount="1" values="D16">
+   </PIN>
+   <PIN pinname="Aspect Ratio" slicecount="1" values="||">
    </PIN>
    </NODE>
    <NODE systemname="XYZ (EX9.Effect)" filename="effects\XYZ.fx" nodename="XYZ (EX9.Effect)" componentmode="Hidden" id="24">
@@ -408,12 +410,12 @@
    </LINK>
    <LINK srcnodeid="47" srcpinname="Output" dstnodeid="21" dstpinname="Y Input Value">
    </LINK>
+   <LINK srcnodeid="25" srcpinname="Transform Out" dstnodeid="17" dstpinname="Transform In">
+   </LINK>
    <LINK srcnodeid="17" srcpinname="Transform Out" dstnodeid="23" dstpinname="Projection" linkstyle="Bezier">
    <LINKPOINT x="450" y="2798">
    </LINKPOINT>
    <LINKPOINT x="5085" y="2798">
    </LINKPOINT>
-   </LINK>
-   <LINK srcnodeid="25" srcpinname="Transform Out" dstnodeid="17" dstpinname="Transform In">
    </LINK>
    </PATCH>
