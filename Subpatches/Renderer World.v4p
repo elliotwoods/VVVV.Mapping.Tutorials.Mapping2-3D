@@ -87,11 +87,11 @@
    <LINK dstnodeid="4" dstpinname="Input 2" srcnodeid="7" srcpinname="Actual Backbuffer Height">
    </LINK>
    <NODE componentmode="InABox" id="2" nodename="IOBox (Node)" systemname="IOBox (Node)">
-   <BOUNDS height="0" left="4815" top="8145" type="Node" width="0">
+   <BOUNDS height="0" left="5115" top="8145" type="Node" width="0">
    </BOUNDS>
-   <BOUNDS height="240" left="4815" top="8145" type="Box" width="795">
+   <BOUNDS height="240" left="5115" top="8145" type="Box" width="795">
    </BOUNDS>
-   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="|View Projection|">
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="|Camera ViewProjection|">
    </PIN>
    <PIN pinname="Input Node" visible="1">
    </PIN>
@@ -430,32 +430,6 @@
    </NODE>
    <LINK srcnodeid="43" srcpinname="Output" dstnodeid="40" dstpinname="Input 2">
    </LINK>
-   <NODE systemname="Multiply (Transform)" nodename="Multiply (Transform)" componentmode="Hidden" id="44">
-   <BOUNDS type="Node" left="4815" top="5550" width="1350" height="270">
-   </BOUNDS>
-   <PIN pinname="Transform Out" visible="1">
-   </PIN>
-   <PIN pinname="Transform In 1" visible="1">
-   </PIN>
-   <PIN pinname="Transform In 2" visible="1">
-   </PIN>
-   <PIN pinname="Transform In Count" slicecount="1" values="3">
-   </PIN>
-   <PIN pinname="Transform In 3" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="44" srcpinname="Transform Out" dstnodeid="2" dstpinname="Input Node" linkstyle="VHV">
-   <LINKPOINT x="4860" y="6693">
-   </LINKPOINT>
-   <LINKPOINT x="4800" y="7423">
-   </LINKPOINT>
-   </LINK>
-   <LINK srcnodeid="6" srcpinname="View" dstnodeid="44" dstpinname="Transform In 1" hiddenwhenlocked="0" linkstyle="VHV">
-   <LINKPOINT x="5275" y="5063">
-   </LINKPOINT>
-   <LINKPOINT x="4880" y="5063">
-   </LINKPOINT>
-   </LINK>
    <LINK srcnodeid="5" srcpinname="Transform Out" dstnodeid="41" dstpinname="Transform In 3" linkstyle="VHV">
    <LINKPOINT x="7375" y="4555">
    </LINKPOINT>
@@ -562,12 +536,46 @@
    </LINK>
    <LINK srcnodeid="51" srcpinname="Output" dstnodeid="45" dstpinname="Go To Position">
    </LINK>
-   <LINK srcnodeid="6" srcpinname="Projection" dstnodeid="44" dstpinname="Transform In 2">
-   </LINK>
    <LINK srcnodeid="5" srcpinname="Transform Out" dstnodeid="44" dstpinname="Transform In 3" linkstyle="Bezier">
    <LINKPOINT x="7710" y="4898">
    </LINKPOINT>
    <LINKPOINT x="6165" y="4898">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="6" srcpinname="View Projection" dstnodeid="2" dstpinname="Input Node">
+   </LINK>
+   <NODE componentmode="InABox" id="53" nodename="IOBox (Node)" systemname="IOBox (Node)">
+   <BOUNDS height="0" left="7065" top="8145" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="240" left="7065" top="8145" type="Box" width="795">
+   </BOUNDS>
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="|Renderer ViewProjection|">
+   </PIN>
+   <PIN pinname="Input Node" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Multiply (Transform)" nodename="Multiply (Transform)" componentmode="Hidden" id="54">
+   <BOUNDS type="Node" left="7050" top="7260" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Transform In 2" visible="1">
+   </PIN>
+   <PIN pinname="Transform Out" visible="1">
+   </PIN>
+   <PIN pinname="Transform In 1" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="41" srcpinname="Transform Out" dstnodeid="54" dstpinname="Transform In 2" linkstyle="Bezier">
+   <LINKPOINT x="6030" y="6233">
+   </LINKPOINT>
+   <LINKPOINT x="7305" y="6233">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="54" srcpinname="Transform Out" dstnodeid="53" dstpinname="Input Node">
+   </LINK>
+   <LINK srcnodeid="6" srcpinname="View" dstnodeid="54" dstpinname="Transform In 1" linkstyle="Bezier">
+   <LINKPOINT x="5370" y="5918">
+   </LINKPOINT>
+   <LINKPOINT x="7050" y="5918">
    </LINKPOINT>
    </LINK>
    </PATCH>

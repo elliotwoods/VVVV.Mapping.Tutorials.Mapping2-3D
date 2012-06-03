@@ -195,6 +195,8 @@
    </PIN>
    <BOUNDS type="Box" width="4800" height="3600">
    </BOUNDS>
+   <PIN pinname="Renderer ViewProjection" visible="1">
+   </PIN>
    </NODE>
    <NODE componentmode="Hidden" filename="Mesh.Viewer.v4p" id="90" nodename="Subpatches\Mesh.Viewer.v4p" systemname="Mesh.Viewer">
    <BOUNDS height="270" left="405" top="1650" type="Node" width="2730">
@@ -426,16 +428,6 @@
    <LINKPOINT x="5900" y="13320">
    </LINKPOINT>
    </LINK>
-   <LINK srcnodeid="89" srcpinname="View Projection" dstnodeid="0" dstpinname="View Projection" linkstyle="Bezier" hiddenwhenlocked="1">
-   <LINKPOINT x="13035" y="16365">
-   </LINKPOINT>
-   <LINKPOINT x="13245" y="8175">
-   </LINKPOINT>
-   <LINKPOINT x="12570" y="2205">
-   </LINKPOINT>
-   <LINKPOINT x="6795" y="2205">
-   </LINKPOINT>
-   </LINK>
    <NODE systemname="GT (Value)" nodename="GT (Value)" componentmode="Hidden" id="106">
    <BOUNDS type="Node" left="10725" top="6165" width="100" height="100">
    </BOUNDS>
@@ -521,14 +513,14 @@
    <LINK srcnodeid="102" srcpinname="Layer" dstnodeid="91" dstpinname="Layer 3">
    </LINK>
    <NODE nodename="IOBox (Node)" componentmode="InABox" id="110" systemname="IOBox (Node)">
-   <BOUNDS type="Node" left="8580" top="16620" width="0" height="0">
+   <BOUNDS type="Node" left="4485" top="16620" width="0" height="0">
    </BOUNDS>
-   <BOUNDS type="Box" left="8580" top="16620" width="795" height="240">
+   <BOUNDS type="Box" left="4485" top="16620" width="795" height="240">
    </BOUNDS>
    <PIN pinname="Descriptive Name" slicecount="1" encoded="0" values="|View Projection|">
    </PIN>
    </NODE>
-   <LINK srcnodeid="89" srcpinname="View Projection" dstnodeid="110" dstpinname="Input Node">
+   <LINK srcnodeid="89" srcpinname="Camera ViewProjection" dstnodeid="110" dstpinname="Input Node">
    </LINK>
    <NODE nodename="IOBox (Node)" componentmode="InABox" id="111" systemname="IOBox (Node)">
    <BOUNDS type="Node" left="8880" top="10500" width="0" height="0">
@@ -976,14 +968,14 @@
    </LINK>
    <LINK srcnodeid="111" srcpinname="Output Node" dstnodeid="115" dstpinname="Source" linkstyle="Bezier" hiddenwhenlocked="1">
    </LINK>
-   <LINK srcnodeid="89" srcpinname="View Projection" dstnodeid="101" dstpinname="View Projection" linkstyle="Bezier">
+   <LINK srcnodeid="89" srcpinname="Camera ViewProjection" dstnodeid="101" dstpinname="View Projection" linkstyle="Bezier">
    <LINKPOINT x="8565" y="13088">
    </LINKPOINT>
    <LINKPOINT x="4350" y="13088">
    </LINKPOINT>
    </LINK>
-   <LINK srcnodeid="89" srcpinname="View Projection" dstnodeid="124" dstpinname="View Projection" linkstyle="Bezier">
-   <LINKPOINT x="8625" y="14970">
+   <LINK srcnodeid="89" srcpinname="Camera ViewProjection" dstnodeid="124" dstpinname="View Projection" linkstyle="Bezier" hiddenwhenlocked="1">
+   <LINKPOINT x="4545" y="14970">
    </LINKPOINT>
    <LINKPOINT x="12885" y="14970">
    </LINKPOINT>
@@ -999,5 +991,13 @@
    <LINK srcnodeid="141" srcpinname="Output" dstnodeid="22" dstpinname="Input 1">
    </LINK>
    <LINK srcnodeid="0" srcpinname="Mouse Over" dstnodeid="141" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="89" srcpinname="Renderer ViewProjection" dstnodeid="0" dstpinname="View Projection">
+   <LINKPOINT x="13575" y="16380">
+   </LINKPOINT>
+   <LINKPOINT x="13575" y="2835">
+   </LINKPOINT>
+   <LINKPOINT x="6645" y="2835">
+   </LINKPOINT>
    </LINK>
    </PATCH>
